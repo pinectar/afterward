@@ -1,89 +1,84 @@
-# Afterward — the calls after a death, made for you
+# Afterward
 
-> One conversation with the family. Then a voice agent phones every bank, insurer, utility and pension —
-> waits on hold, discloses it's an AI, and brings back a **verified case reference and a stereo recording
-> for every account**. It never guesses: anything missing becomes a question for the family, never an invention.
+**The calls after a death, made for you.**
 
-**Live demo:** https://afterward-lablab.vercel.app · **Board replay:** `/board` · **Evidence:** `/ledger/est_holt`
+Live demo: **https://afterward-lablab.vercel.app** (no sign-in — the board starts replaying on its own) · watch: [`docs/afterward-demo.mp4`](docs/afterward-demo.mp4) · deck: [`docs/deck/afterward-deck.pdf`](docs/deck/afterward-deck.pdf)
 
-Built solo for the **AssemblyAI Voice Agent Hackathon** (Sep 2026).
+Built solo for the AssemblyAI Voice Agent Hackathon, September 2026.
 
-## The problem
+## Why this exists
 
-GOV.UK, verbatim: *"You'll also need to tell organisations outside government, like employers and private
-pension providers, banks, and utility companies."* The government's Tell Us Once service stops at
-government's edge. The UK Death Notification Service covers member banks only. Everyone else answers the
-phone — so a grieving family spends days on hold, retelling the death to a dozen call centres.
+When someone dies in the UK, the government runs a service called Tell Us Once. One form, and every government department knows. Then GOV.UK tells you, in its own words: *"You'll also need to tell organisations outside government, like employers and private pension providers, banks, and utility companies."*
 
-## What the judges' rubric asks, and where to look
+That sentence is doing a lot of work. It means the family spends the worst week of their lives in phone queues, saying "she died on the 13th" to a dozen different call centres, each with its own menu tree and its own hold music.
 
-| Criterion | Evidence |
-|---|---|
-| **Application of Technology** | One live AssemblyAI **Voice Agent API** session per call (WS protocol notes: [docs/voice-agent-api-cheatsheet.md](docs/voice-agent-api-cheatsheet.md)); client-side tools (`press_key` DTMF, `flag_needs_family`, validated `record_outcome`); per-call keyterms; `transcription_mode` switched to `max_accuracy` right before the reference is spoken; sponsor-side **stereo session recordings** (left = institution, right = agent) as the evidence artifacts; turn detection against scripted IVR menus |
-| **Originality** | Nobody automates the *calls* — Empathy/Settld are forms and email; check their sites. The refuse-to-guess Estate Ledger is a checkable artifact: verified refs, stereo recordings, and one real mid-call validator REFUSAL (Harberton & Vale, visible on the board and in `fixtures/runs.json`). In the event’s public gallery we found no other bereavement entry (checked Sep 22) |
-| **Business Value** | 650k UK / 2.8M US deaths a year; go-to-market through funeral directors' aftercare; Tell Us Once and the DNS prove institutions want structured notification — Afterward feeds DNS where it exists and calls everyone else |
-| **Presentation** | Deck: [docs/deck/afterward-deck.pdf](docs/deck/afterward-deck.pdf) · Video (3:23): [docs/afterward-demo.mp4](docs/afterward-demo.mp4); the board demo needs no sign-in and replays real captured sessions |
+Afterward makes those calls instead. You tell it about the death once. It phones each institution, presses the menu keys, sits through the hold, tells whoever answers that it's an AI calling with the family's permission, and comes back with a case reference and a recording for every account. When it's asked for something the family never gave it, it doesn't improvise. The card turns amber and the question goes back to the family.
 
-## What's real vs simulated (honesty box)
+That last rule isn't a prompt. There's a validator on the server that checks every reference the agent tries to record against what the clerk actually said, and it will refuse its own agent mid-call. It did, once, on a real captured session (Harberton & Vale — you can watch the REFUSED event land on the board).
 
-- **Real:** every card replays a genuine Voice Agent session — live STT, turn-taking, tool calls, TTS; the
-  reference numbers were heard on-call and verified server-side against ground truth; recordings/timelines
-  are unedited sponsor-side artifacts; validator refusals happened mid-call.
-- **Simulated, and labelled:** the 12 institutions are fictional. Their lines are a deterministic scripted
-  test bed (IVR menus, hold music, clerk voices) modelled on real bereavement lines. **No real institution
-  was told of a fictional death — that would be fraud, so we refuse to demo it.**
-- **Honest failure hunt:** we degraded one closing line to 6-bit audio at 1.35× speed to force a mishear;
-  the STT still captured the reference correctly. The captured dataset holds one real refusal: a premature
-  record attempt on Harberton & Vale was rejected by the validator, re-asked, and re-verified on the same call.
+## What's real and what isn't
 
-## Measured on the seeded estate (full-length holds)
+I want to be precise about this, because demos in this space usually aren't.
+
+**Real:** every card on the board replays a genuine AssemblyAI Voice Agent session. Live speech-to-text, turn-taking, tool calls, TTS. The reference numbers were heard on-call and verified against ground truth. The recordings and timelines are the sponsor-side session artifacts, unedited. The validator refusal happened mid-call and recovered on the same call.
+
+**Simulated, and labelled on screen:** the twelve institutions are fictional. Their phone lines are a scripted, deterministic test bed (IVR menus, hold music, clerk voices) modelled on real bereavement lines. I did not call a real bank about a fictional death. That would be fraud, so I refuse to demo it, and the roadmap starts with the call that *is* legitimate: phoning real bereavement lines to ask what they'd need from a family.
+
+I also tried to break it: I degraded one clerk's closing line to 6-bit audio at 1.35× speed to force a mishear. The STT still got the reference right. Annoying, but a good problem to have.
+
+## The numbers (measured, not vibes)
 
 | | |
 |---|---|
-| Calls made (full-length holds) | **12** |
-| References verified against clerk ground truth | **12 / 12** |
-| Unverified writes | **0** |
-| Escalated to the family instead of guessed | **2** |
-| Validator refusals (all recovered on-call) | **1** |
-| Total calling time | **27m 45s**, of which **9m 47s on hold** |
-| Family time spent | one brief conversation |
+| Calls made, full-length holds | 12 |
+| References verified against clerk ground truth | 12 / 12 |
+| Unverified writes | 0 |
+| Escalated to the family instead of guessed | 2 |
+| Validator refusals, recovered on-call | 1 |
+| Total calling time | 27m 45s, of which 9m 47s on hold |
+| The family's time | one short conversation |
 
-Reproduce: `npm run verify` (offline, asserts the doctrine held over the captured dataset) or
-`npm run capture` (re-runs all 12 calls live — needs `ASSEMBLYAI_API_KEY`).
+Reproduce with `npm run verify` — it runs offline against the captured dataset and asserts the doctrine held (8 checks). Or re-run the whole capture live with `npm run capture` and your own `ASSEMBLYAI_API_KEY`.
 
-## Quickstart
+## If you're judging this, where to look
+
+- **Application of technology** — one live Voice Agent session per call. Client-side tools: `press_key` for DTMF, `flag_needs_family`, and a validated `record_outcome` that can be refused. Per-call keyterms for the deceased's name (never the expected reference — that would be cheating). `transcription_mode` flips to `max_accuracy` right before the reference is spoken. The stereo session recordings (institution left, agent right) are the Estate Ledger's evidence. My protocol notes: [`docs/voice-agent-api-cheatsheet.md`](docs/voice-agent-api-cheatsheet.md).
+- **Originality** — Empathy and Settld do forms and email; check their sites. Nobody makes the calls. The refuse-to-guess Estate Ledger is checkable, not claimed: verified refs, recordings, and one real refusal in [`fixtures/runs.json`](fixtures/runs.json). I found no other bereavement entry in the event's public gallery (checked Sep 22).
+- **Business value** — 650k UK deaths a year, about 3M in the US, dozens of organisations per estate. Measured cost: ~£2–3 of agent time per estate (12 calls took 27m45s). Sold through funeral directors' aftercare at a target £79–149 per case. Tell Us Once and the DNS cover their slices and leave the family holding the phone for the rest.
+- **Presentation** — the video, the deck, and a live URL that works logged-out.
+
+## Run it
 
 ```bash
 npm install
-npm run verify        # offline judge-check over the captured dataset — PASS/FAIL
-npm run dev           # board + ledger on the captured fixtures, no key needed
-# live calls (optional): echo "ASSEMBLYAI_API_KEY=..." > .env.local && npm run spike wessex-bs
+npm run verify        # offline: replays the captured dataset, prints PASS/FAIL
+npm run dev           # board + ledger on the fixtures, no key needed
+# live calls, if you want them:
+echo "ASSEMBLYAI_API_KEY=..." > .env.local && npm run spike wessex-bs
 ```
 
-## Architecture
+## How it's wired
 
 ```mermaid
 flowchart LR
   F[Family intake<br/>one conversation] --> O[Orchestrator]
   O -->|PCM 24k, paced| VA[AssemblyAI Voice Agent API<br/>one live session per call]
-  SIM[Deterministic IVR simulator<br/>menus · hold music · clerk clips] -->|audio in| O
+  SIM[Scripted institution lines<br/>menus · hold music · clerk clips] -->|audio in| O
   VA -->|transcript.agent| SIM
   VA -->|tool.call: press_key / flag_needs_family / record_outcome| O
   O -->|validated tool.result| VA
-  VA -->|session artifacts: stereo OGG + timeline| L[Estate Ledger<br/>verified refs · recordings]
-  O -->|events| B[Board UI<br/>12 case cards, live replay]
+  VA -->|stereo recording + timeline| L[Estate Ledger]
+  O -->|events| B[The board]
 ```
 
-Design decisions (ADRs, short): [SPEC.md](SPEC.md) · UI contract: [UI-SPEC.md](UI-SPEC.md) ·
-protocol notes: [docs/voice-agent-api-cheatsheet.md](docs/voice-agent-api-cheatsheet.md)
+The one design decision worth stealing: the institution side is a deterministic state machine, not a second live agent. Two agents pointed at each other deadlock on turn-taking. One real agent against a scripted world gives you reproducibility and keeps the honesty story clean.
 
-## Limitations (stated, not hidden)
+Working docs, if you're curious: [SPEC.md](SPEC.md) · [UI-SPEC.md](UI-SPEC.md) · [DESIGN.md](DESIGN.md)
 
-- Real institutions require identity verification and documents before *actioning* an estate; Afterward's
-  green means what a first human call achieves — **case opened, documents requested** — never "done".
-- The PSTN leg (real outbound calls via Twilio SIP) is designed but not wired in this build; the sim test
-  bed is the demo. The requirements-discovery call against a real line is the first production milestone.
-- One clerk asked for “any other personal details”; the agent had the executor's name in its brief but still
-  escalated the open-ended part to the family rather than improvise — over-caution is the failure mode we chose.
+## Limits, stated plainly
 
-MIT licensed. AI-use disclosure in [CLAUDE.md](CLAUDE.md).
+- Green means what a first human call achieves: case opened, documents requested. It never means "done". Real estates still need certificates and probate, and that stays human.
+- The real phone leg (Twilio SIP) is designed but not wired in this build. The sim test bed is the demo.
+- One clerk asked for "any other personal details" and the agent escalated even though it had the executor's name in its brief. Over-caution is the failure mode I chose, but it is a failure mode.
+
+MIT licensed. Most of the code was written with Claude under my review — details in [CLAUDE.md](CLAUDE.md).
