@@ -23,7 +23,7 @@ Market: 650k UK / 2.8M US deaths a year; distribution through funeral directors'
 **Category tags:** Voice Agents, Productivity, Social Good
 **Demo platform:** Vercel
 **Application URL:** https://afterward-lablab.vercel.app
-**GitHub:** https://github.com/itssaharsh/afterward
+**GitHub:** https://github.com/pinectar/afterward
 **Video:** docs/afterward-demo.mp4 (MP4, 3:23 — above the 3:00 rubric floor, under 5:00)
 **Slides:** docs/deck/afterward-deck.pdf
 **Cover image:** docs/cover.png (1600×900)
