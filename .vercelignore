@@ -1,0 +1,6 @@
+assets/
+qa/
+fixtures/timelines/
+.venv-tools/
+graphify-out/
+docs/deck/

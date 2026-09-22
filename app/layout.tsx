@@ -22,7 +22,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <div className="ml-auto flex items-center gap-5 text-sm">
               <Link href="/board" className="hover:underline underline-offset-4">The board</Link>
               <Link href="/ledger/est_holt" className="hover:underline underline-offset-4">Estate Ledger</Link>
-              <a href="https://github.com/saharshxyz/afterward" className="text-ink-muted hover:underline underline-offset-4">GitHub</a>
+              <a href="https://github.com/itssaharsh/afterward" className="text-ink-muted hover:underline underline-offset-4">GitHub</a>
             </div>
           </div>
         </nav>

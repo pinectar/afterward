@@ -1,6 +1,6 @@
 import { chromium } from "playwright";
 const base = process.argv[2] ?? "http://localhost:3100";
-const routes = ["/", "/board", "/ledger/est_holt", "/_kit"];
+const routes = ["/", "/board", "/ledger/est_holt", "/kit"];
 const widths = [390, 1024, 1440];
 const b = await chromium.launch(); const p = await b.newPage();
 const errors = [];

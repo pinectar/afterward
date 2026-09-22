@@ -38,7 +38,15 @@ phone — so a grieving family spends days on hold, retelling the death to a doz
 
 ## Measured on the seeded estate (full-length holds)
 
-<!--TOTALS-->
+| | |
+|---|---|
+| Calls made (full-length holds) | **12** |
+| References verified against clerk ground truth | **12 / 12** |
+| Unverified writes | **0** |
+| Escalated to the family instead of guessed | **2** |
+| Validator refusals (all recovered on-call) | **1** |
+| Total calling time | **27m 45s**, of which **9m 47s on hold** |
+| Family time spent | one brief conversation |
 
 Reproduce: `npm run verify` (offline, asserts the doctrine held over the captured dataset) or
 `npm run capture` (re-runs all 12 calls live — needs `ASSEMBLYAI_API_KEY`).
@@ -75,7 +83,7 @@ protocol notes: [docs/voice-agent-api-cheatsheet.md](docs/voice-agent-api-cheats
   green means what a first human call achieves — **case opened, documents requested** — never "done".
 - The PSTN leg (real outbound calls via Twilio SIP) is designed but not wired in this build; the sim test
   bed is the demo. The requirements-discovery call against a real line is the first production milestone.
-- One scripted institution (Ashdown) asks a question outside the family's brief; the agent escalates it —
-  by design, but it shows scripted worlds drift too.
+- One clerk asked for “any other personal details”; the agent had the executor's name in its brief but still
+  escalated the open-ended part to the family rather than improvise — over-caution is the failure mode we chose.
 
 MIT licensed. AI-use disclosure in [CLAUDE.md](CLAUDE.md).

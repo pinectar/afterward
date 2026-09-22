@@ -29,7 +29,7 @@ deviations:
 | S1 | / | landing: product info, honest what's-real, proof | direct | "Watch the board run" → /board | static |
 | S2 | /board | the demo: replayed real runs on 12 cards | S1, direct | replay controls; card→ledger row | replaying, done, live-run(flagged) |
 | S3 | /ledger/est_holt | evidence artifact | S2, direct | play recordings; print | populated (fixtures) |
-| S4 | /_kit | every component every state | direct | — | all |
+| S4 | /kit | every component every state | direct | — | all |
 
 ## 3. Flow map
 S1 --CTA--> S2(replaying, autoplay) --card click--> S3#row ; S2 --R--> restart replay
@@ -56,4 +56,4 @@ C-08 HonestyPanel: two-column real vs simulated, line-ruled; links to cheat shee
 ## 8. Copy deck: buttons: "Watch the board run" · "Read the ledger" · "Restart replay". Amber: "Needs you — {question}". Honest labels: "SIMULATED TEST BED", "replay of a real captured session", "left channel: institution · right: Afterward". Empty states never shown to judges (fixtures always seeded). Errors: "This replay file didn't load. Refresh, or read the ledger instead."
 ## 9. Brand: mark = seal monogram "A" inside a 48grid circle with a cut telephone-handset counter; favicon svg + theme-color #F1EFEA; OG: ledger row with a stamped ref on paper.
 ## 10. Don'ts: no dark mode, no chat UI, no orb, no waveform hero, no % claims not in fixtures, no "done" for green.
-## 11. Acceptance: qa.mjs screenshots at 390/1024/1440 for /, /board, /ledger/est_holt, /_kit; no horizontal scroll at 390; AA contrast; reduced-motion clean; no console errors.
+## 11. Acceptance: qa.mjs screenshots at 390/1024/1440 for /, /board, /ledger/est_holt, /kit; no horizontal scroll at 390; AA contrast; reduced-motion clean; no console errors.

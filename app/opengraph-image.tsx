@@ -15,7 +15,7 @@ export default function Image() {
             <div style={{ display: "flex", fontSize: 24, color: "#655A54" }}>Wessex Building Society</div>
             <div style={{ display: "flex", fontSize: 40, fontFamily: "monospace", fontWeight: 700 }}>Case opened · WBS-3098</div>
           </div>
-          <div style={{ display: "flex", width: 96, height: 96, borderRadius: 96, border: "6px solid #2E6B4A", alignItems: "center", justifyContent: "center", fontSize: 52, color: "#2E6B4A" }}>✓</div>
+          <div style={{ display: "flex", width: 96, height: 96, borderRadius: 96, border: "6px solid #2E6B4A", alignItems: "center", justifyContent: "center", fontSize: 46, color: "#2E6B4A", fontWeight: 700 }}>A</div>
         </div>
       </div>
     ),
