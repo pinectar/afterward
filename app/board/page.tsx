@@ -8,9 +8,11 @@ import scenarioKinds from "@/lib/sim/kinds.json";
 const fixtures = raw as unknown as Fixtures;
 
 export default function Board() {
+  // ?t=SECONDS — start the replay clock mid-way (demo harness, per UI-SPEC ?state pattern)
+  const initialT = typeof window !== "undefined" ? (parseFloat(new URLSearchParams(window.location.search).get("t") ?? "0") || 0) * 1000 : 0;
   const preps = useMemo(() => fixtures.runs.filter((r) => !r.error).map(prepare), []);
   const total = useMemo(() => preps.length ? Math.max(...preps.map((p, i) => i * STAGGER_MS + p.duration)) : 0, [preps]);
-  const [t, setT] = useState(0);
+  const [t, setT] = useState(initialT);
   const [playing, setPlaying] = useState(true);
   const last = useRef<number | null>(null);
 
@@ -46,7 +48,7 @@ export default function Board() {
           <p className="text-sm text-ink-muted">Executor: Daniel Holt (son) · died 13 September 2026 · the family does <strong>not</strong> have account or policy numbers</p>
         </div>
         <div className="ml-auto flex items-center gap-3">
-          <button className="btn-secondary text-sm" onClick={() => { setT(0); setPlaying(true); last.current = null; }}>Restart replay (R)</button>
+          <button className="btn-secondary text-sm" onClick={() => { setT(initialT); setPlaying(true); last.current = null; }}>Restart replay (R)</button>
           <button className="btn-primary text-sm" onClick={() => setPlaying((p) => !p)} aria-pressed={!playing}>{playing ? "Pause" : "Play"}</button>
         </div>
       </header>
