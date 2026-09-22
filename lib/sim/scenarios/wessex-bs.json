@@ -1,0 +1,21 @@
+{
+  "id": "wessex-bs",
+  "name": "Wessex Building Society",
+  "kind": "bank",
+  "clerkVoice": "en-GB-SoniaNeural",
+  "ivrVoice": "en-GB-RyanNeural",
+  "holdSeconds": 60,
+  "ring": { "prompt": "Welcome to Wessex Building Society. Calls are recorded for training and quality. You are number four in the queue." },
+  "menu": { "prompt": "For balances and payments, press one. To report a lost card, press two. For bereavement services, press three. For anything else, press four.", "correctKey": "3", "wrongKeyPrompt": "Sorry, that isn't a valid option. Please try again." },
+  "holdAnnouncement": "Thank you for holding. Your call is important to us. An adviser will be with you shortly.",
+  "clerk": {
+    "greeting": "Bereavement team, Susan speaking. I'm sorry for your loss. Can I take the full name of the account holder who has passed away?",
+    "turns": [
+      { "id": "NAME", "say": "", "expect": ["deceased_full_name"], "next": "DOD", "reprompt": "Sorry, could you spell the surname for me?" },
+      { "id": "DOD", "say": "Thank you. And the date they passed away?", "expect": ["date_of_death"], "next": "ACCT", "reprompt": "Sorry, could you give me that date again?" },
+      { "id": "ACCT", "say": "And do you have the account number or the sort code to hand?", "askUnavailable": "account_number", "next": "OUTCOME", "reprompt": "No trouble at all — we can trace it another way." }
+    ]
+  },
+  "outcome": { "type": "needs_family", "refPrefix": "WBS", "documents": ["death certificate", "grant of probate or the will"], "closing": "I've opened a bereavement case, your reference is {REF}. We will need the account number, or the branch can trace it with the death certificate. Is there anything else?" },
+  "quirk": "Asks for an account number most families do not have — Afterward refuses to guess and flips amber."
+}

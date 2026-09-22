@@ -17,7 +17,7 @@
 - **Orchestrator owns:** audio piping (resample as needed), **hold-state suppression** (classify hold music/announcements; withhold audio from the agent during hold; release on live-human detection — this is the flagship realtime moment), **press_key DTMF client tool** (agent decides, orchestrator executes; sim = state transition, real calls = Twilio sendDigits), per-call run lifecycle, event stream to UI.
 - **Calls ≤ ~3.5 min each** (hold segments 30–90s real time — honest timers, no fake clocks) so serverless duration limits are safe; bridge can move to a persistent host if needed.
 - **AssemblyAI features (load-bearing):** Voice Agent API (caller), per-call keyterms/transcription prompt (deceased's name spelling, refs), client-side tools (validators that refuse + press_key + record_outcome), turn detection/interruption handling, session history (recording + timeline = evidence), webhooks (session lifecycle), LLM Gateway structured outputs + fallbacks (per-call outcome JSON), PII redaction concepts on the evidence pack.
-- **Stack:** Next.js (App Router, TS, Tailwind) on Vercel; Supabase (Postgres + Realtime) for runs/cards/events; Node orchestrator (start as a local/route-handler worker; ≤3.5-min calls); seeded demo mode (`?demo=true`) replays captured runs with zero live dependencies — the default judge path.
+- **Stack:** Next.js (App Router, TS, Tailwind) on Vercel; NO external DB: seeded fixtures (deterministic judge path) + SSE event streams for live runs (state accumulates in the stream; live runs labeled ephemeral sandbox); Estate Ledger fixture-backed; Node orchestrator (start as a local/route-handler worker; ≤3.5-min calls); seeded demo mode (`?demo=true`) replays captured runs with zero live dependencies — the default judge path.
 - **Mid-call UI events come from OUR orchestrator** (Supabase Realtime), not sponsor webhooks (those fire only at session start/end).
 
 ## Demo world (R17/R18)
@@ -32,7 +32,7 @@
 4. **The real call exhibit** — the one unedited requirements-discovery call, presented per doctrine #4.
 
 ## Deliverables checklist (T-24h = Sep 29)
-Video 3:30–4:30 (hook ≤12s; product by 0:30; amber moment; real call BEFORE judge-phone beat; slides ≤45s) · PDF deck (market UK-led + US sizing, competitive: Empathy/Settld/DNS/Tell-Us-Once, revenue: funeral-director aftercare B2B + per-estate B2C, roadmap, limitations) · README hero (criteria-mapped evidence table, what's real vs simulated, 3-command quickstart) · MIT LICENSE · live Vercel URL (demo mode default) · fresh public repo, secret-scanned · new lablab team (NOT Rollcall's) · tags: AssemblyAI, Vercel, Supabase.
+Video 3:30–4:30 (hook ≤12s; product by 0:30; amber moment; real call BEFORE judge-phone beat; slides ≤45s) · PDF deck (market UK-led + US sizing, competitive: Empathy/Settld/DNS/Tell-Us-Once, revenue: funeral-director aftercare B2B + per-estate B2C, roadmap, limitations) · README hero (criteria-mapped evidence table, what's real vs simulated, 3-command quickstart) · MIT LICENSE · live Vercel URL (demo mode default) · fresh public repo, secret-scanned · new lablab team (NOT Rollcall's) · tags: AssemblyAI, Vercel.
 
 ## Open items
 - [ ] Voice Agent API: confirm audio format/sample rate, session.update capabilities, temporary token flow (docs fetch before bridge code)

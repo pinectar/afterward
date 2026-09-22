@@ -1,0 +1,20 @@
+{
+  "id": "northgate-energy",
+  "name": "Northgate Energy",
+  "kind": "utility",
+  "clerkVoice": "en-GB-ThomasNeural",
+  "ivrVoice": "en-GB-LibbyNeural",
+  "holdSeconds": 35,
+  "ring": { "prompt": "You're through to Northgate Energy. This call may be recorded. Please hold while we connect you." },
+  "menu": { "prompt": "For meter readings, press one. For payments, press two. To tell us about a bereavement or change of tenancy, press three.", "correctKey": "3", "wrongKeyPrompt": "I didn't catch that. Please choose again." },
+  "holdAnnouncement": "We're experiencing a high volume of calls. Thank you for your patience.",
+  "clerk": {
+    "greeting": "Hello, you're through to Priya on the care team. How can I help today?",
+    "turns": [
+      { "id": "NAME", "say": "", "expect": ["deceased_full_name", "date_of_death"], "next": "REL", "reprompt": "I'm sorry — could I have the customer's full name and the date they passed away?" },
+      { "id": "REL", "say": "Thank you, and I'm sorry for your loss. Can I ask your name and your relationship to the customer?", "expect": ["caller_name", "caller_relationship"], "next": "OUTCOME", "reprompt": "Sorry, and your relationship to the account holder?" }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "NGE", "documents": ["death certificate copy by post or upload"], "closing": "I've registered the bereavement and paused all reminders. Your reference is {REF}. We'll write out with the next steps. Take care." },
+  "quirk": "Clean path: registers the notification and issues a reference on the first call."
+}
