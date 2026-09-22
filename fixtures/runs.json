@@ -5,7 +5,7 @@
     "ambers": 2,
     "rejectionsRecovered": 1,
     "unverifiedWrites": 0,
-    "totalCallSeconds": 1661,
+    "totalCallSeconds": 1665,
     "totalHoldSeconds": 587,
     "holdScale": 1,
     "measuredAt": "2026-09-22T20:08:53.407Z"
@@ -2020,8 +2020,8 @@
     {
       "id": "netherfield-council",
       "institution": "Netherfield District Council",
-      "sessionId": "sess_23e03a64a2224ea29364d777b2dbdcb2",
-      "seconds": 168,
+      "sessionId": "sess_1a0b6716a69842d1be08c2630aa26c17",
+      "seconds": 172,
       "holdSeconds": 70,
       "amber": null,
       "outcome": {
@@ -2037,47 +2037,47 @@
       "artifacts": true,
       "events": [
         {
-          "t": 760,
+          "t": 929,
           "type": "session.ready",
-          "session_id": "sess_23e03a64a2224ea29364d777b2dbdcb2"
+          "session_id": "sess_1a0b6716a69842d1be08c2630aa26c17"
         },
         {
-          "t": 760,
+          "t": 930,
           "type": "call.started",
           "state": "RING",
           "institution": "Netherfield District Council"
         },
         {
-          "t": 2861,
+          "t": 1112,
           "type": "line.audio",
           "state": "RING",
           "clip": "ring",
           "text": "Welcome to Netherfield District Council. Your call may be recorded. Lines are busy at the moment — please hold."
         },
         {
-          "t": 6686,
+          "t": 6828,
           "type": "line.heard_as",
           "text": "Welcome to Netherfield District Council. Your call may be recorded."
         },
         {
-          "t": 10013,
+          "t": 10142,
           "type": "line.audio",
           "state": "MENU",
           "clip": "menu",
           "text": "For bins and recycling, press one. For housing, press two. For planning, press three. For council tax, including bereavement, press four."
         },
         {
-          "t": 10386,
+          "t": 10525,
           "type": "line.heard_as",
           "text": "Lines are busy at the moment, please hold."
         },
         {
-          "t": 24986,
+          "t": 25146,
           "type": "line.heard_as",
           "text": "For bins and recycling, press 1. For housing, press 2. For planning, press 3. For council tax, including bereavement, press 4."
         },
         {
-          "t": 26758,
+          "t": 26938,
           "type": "tool.call",
           "name": "press_key",
           "args": {
@@ -2085,162 +2085,177 @@
           }
         },
         {
-          "t": 26758,
+          "t": 26938,
           "type": "dtmf",
           "state": "MENU",
           "key": "4"
         },
         {
-          "t": 26758,
+          "t": 26938,
           "type": "tool.result",
           "name": "press_key",
           "ok": true
         },
         {
-          "t": 26758,
+          "t": 26938,
           "type": "hold.started",
           "state": "HOLD",
           "plannedSeconds": 70
         },
         {
-          "t": 31510,
-          "type": "agent.said",
-          "state": "HOLD",
-          "text": "Please wait while I connect you."
+          "t": 29985,
+          "type": "tool.call",
+          "name": "press_key",
+          "args": {
+            "key": "4"
+          }
         },
         {
-          "t": 31510,
+          "t": 29985,
+          "type": "dtmf",
+          "state": "HOLD",
+          "key": "4"
+        },
+        {
+          "t": 29985,
+          "type": "tool.result",
+          "name": "press_key",
+          "ok": false
+        },
+        {
+          "t": 36407,
+          "type": "agent.said",
+          "state": "HOLD",
+          "text": "I am sorry, I am having trouble connecting to the menu. Please hold while I try that again."
+        },
+        {
+          "t": 36407,
           "type": "agent.final",
-          "text": "Please wait while I connect you.",
+          "text": "I am sorry, I am having trouble connecting to the menu. Please hold while I try that again.",
           "interrupted": false
         },
         {
-          "t": 93034,
+          "t": 93171,
           "type": "hold.ended",
           "state": "HOLD"
         },
         {
-          "t": 93034,
+          "t": 93171,
           "type": "line.audio",
           "state": "CLERK",
           "clip": "clerk_greeting",
           "text": "Council tax team, this is Barbara speaking. I can see you've come through on the bereavement option — I'm sorry for your loss. Can I take the name of the person who's died?"
         },
         {
-          "t": 97462,
+          "t": 98407,
           "type": "line.heard_as",
-          "text": "Council tax team."
+          "text": "Council tax team, this is Barbara speaking."
         },
         {
-          "t": 99049,
-          "type": "line.heard_as",
-          "text": "This is Barbara speaking."
-        },
-        {
-          "t": 104657,
+          "t": 103815,
           "type": "line.heard_as",
           "text": "I can see you've come through on the bereavement option. I'm sorry for your loss."
         },
         {
-          "t": 106776,
+          "t": 105713,
           "type": "agent.final",
           "text": "Hello — I'm an",
           "interrupted": true
         },
         {
-          "t": 108071,
+          "t": 107202,
           "type": "line.heard_as",
           "text": "Can I take the name of the person who's died?"
         },
         {
-          "t": 113960,
+          "t": 121437,
           "type": "agent.said",
           "state": "CLERK",
-          "text": "The deceased is Margaret Rose Holt, spelled H O L T."
+          "text": "Hello — I'm an AI assistant calling on behalf of the family of Margaret Holt, with their permission, to register a bereavement. The family keeps a recording of this call. The deceased was Margaret Rose Holt."
         },
         {
-          "t": 113960,
+          "t": 121437,
           "type": "agent.final",
-          "text": "The deceased is Margaret Rose Holt, spelled H O L T.",
+          "text": "Hello — I'm an AI assistant calling on behalf of the family of Margaret Holt, with their permission, to register a bereavement. The family keeps a recording of this call. The deceased was Margaret Rose Holt.",
           "interrupted": false
         },
         {
-          "t": 113961,
+          "t": 121437,
           "type": "line.audio",
           "state": "TURN_DOD",
           "clip": "turn_DOD_say",
           "text": "Thank you. And the date of death?"
         },
         {
-          "t": 120745,
+          "t": 125743,
           "type": "line.heard_as",
           "text": "Thank you."
         },
         {
-          "t": 122868,
+          "t": 127754,
           "type": "line.heard_as",
           "text": "And the date of death?"
         },
         {
-          "t": 125045,
+          "t": 132098,
           "type": "agent.said",
           "state": "TURN_DOD",
           "text": "She died on the thirteenth of September, twenty twenty-six."
         },
         {
-          "t": 125045,
+          "t": 132098,
           "type": "agent.final",
           "text": "She died on the thirteenth of September, twenty twenty-six.",
           "interrupted": false
         },
         {
-          "t": 125047,
+          "t": 132098,
           "type": "line.audio",
           "state": "TURN_REL",
           "clip": "turn_REL_say",
           "text": "And are you the executor? Your name and relationship, please."
         },
         {
-          "t": 133487,
+          "t": 139560,
           "type": "line.heard_as",
           "text": "And are you the executor?"
         },
         {
-          "t": 136456,
+          "t": 142768,
           "type": "line.heard_as",
           "text": "Your name and relationship, please."
         },
         {
-          "t": 143013,
+          "t": 148693,
           "type": "agent.said",
           "state": "TURN_REL",
-          "text": "I am calling on behalf of Daniel Holt, her son and executor, with the family's permission."
+          "text": "I am calling on behalf of Daniel Holt, who is her son and the executor."
         },
         {
-          "t": 143013,
+          "t": 148693,
           "type": "agent.final",
-          "text": "I am calling on behalf of Daniel Holt, her son and executor, with the family's permission.",
+          "text": "I am calling on behalf of Daniel Holt, who is her son and the executor.",
           "interrupted": false
         },
         {
-          "t": 143013,
+          "t": 148693,
           "type": "line.audio",
           "state": "OUTCOME",
           "clip": "outcome_closing",
           "text": "I've updated the council tax record, and any exemption will be applied from the date of death. Your reference is N D C,   8 8 3 8. You'll see the revised bill in the post."
         },
         {
-          "t": 154996,
+          "t": 159638,
           "type": "line.heard_as",
           "text": "I've updated the council tax record, and any exemption will be applied from the date of death."
         },
         {
-          "t": 162942,
+          "t": 167601,
           "type": "line.heard_as",
           "text": "Your reference is NDC 8838. You'll see the revised bill in the post."
         },
         {
-          "t": 164832,
+          "t": 169547,
           "type": "tool.call",
           "name": "record_outcome",
           "args": {
@@ -2252,7 +2267,7 @@
           }
         },
         {
-          "t": 164832,
+          "t": 169548,
           "type": "outcome.recorded",
           "state": "OUTCOME",
           "reference": "NDC-8838",
@@ -2262,25 +2277,25 @@
           "notes": "Bereavement registered for Margaret Rose Holt."
         },
         {
-          "t": 164832,
+          "t": 169548,
           "type": "tool.result",
           "name": "record_outcome",
           "ok": true
         },
         {
-          "t": 165723,
+          "t": 170407,
           "type": "agent.said",
           "state": "OUTCOME",
           "text": "Thank you for your help."
         },
         {
-          "t": 165724,
+          "t": 170407,
           "type": "agent.final",
           "text": "Thank you for your help.",
           "interrupted": false
         },
         {
-          "t": 165724,
+          "t": 170408,
           "type": "call.done",
           "state": "DONE",
           "amber": false,
