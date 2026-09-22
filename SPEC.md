@@ -34,6 +34,10 @@
 ## Deliverables checklist (T-24h = Sep 29)
 Video 3:30–4:30 (hook ≤12s; product by 0:30; amber moment; real call BEFORE judge-phone beat; slides ≤45s) · PDF deck (market UK-led + US sizing, competitive: Empathy/Settld/DNS/Tell-Us-Once, revenue: funeral-director aftercare B2B + per-estate B2C, roadmap, limitations) · README hero (criteria-mapped evidence table, what's real vs simulated, 3-command quickstart) · MIT LICENSE · live Vercel URL (demo mode default) · fresh public repo, secret-scanned · new lablab team (NOT Rollcall's) · tags: AssemblyAI, Vercel.
 
+## Status: shipped vs designed
+SHIPPED in this build: sim test bed (12 lines), live Voice Agent caller, validator tools, hold suppression, captured dataset + verify, board replay, Estate Ledger, landing, deck.
+DESIGNED, NOT SHIPPED (roadmap, stated in README limitations): Twilio PSTN leg, judge-phone beat, real requirements-discovery call, live SSE run-from-browser.
+
 ## Open items
 - [ ] Voice Agent API: confirm audio format/sample rate, session.update capabilities, temporary token flow (docs fetch before bridge code)
 - [ ] Concurrency limit on account (open 6 sessions test)

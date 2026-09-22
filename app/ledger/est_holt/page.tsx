@@ -1,6 +1,7 @@
 import raw from "@/fixtures/runs.json";
 import type { Fixtures } from "@/lib/replay";
 import fs from "node:fs";
+import { PrintButton } from "@/components/PrintButton";
 import path from "node:path";
 
 const fixtures = raw as unknown as Fixtures;
@@ -18,7 +19,7 @@ export default function Ledger() {
             <h1 className="text-3xl">Estate Ledger</h1>
             <p className="text-ink-muted">Margaret Rose Holt · 12 March 1941 — 13 September 2026</p>
           </div>
-          <button className="btn-secondary ml-auto text-sm no-print" >Print</button>
+          <PrintButton />
         </div>
         <p className="mt-4 text-sm">
           Every entry below is evidence from a real, recorded Voice Agent session against a scripted institution line
@@ -34,6 +35,7 @@ export default function Ledger() {
       <div className="ruled">
         {fixtures.runs.filter((r) => !r.error).map((r) => {
           const rec = fs.existsSync(path.join(process.cwd(), "public/recordings", r.id + ".ogg"));
+          const cond = fs.existsSync(path.join(process.cwd(), "public/recordings", r.id + ".condensed.ogg"));
           return (
             <section key={r.id} id={r.id} className="grid grid-cols-1 gap-3 py-6 sm:grid-cols-[1fr_240px]">
               <div>
@@ -61,8 +63,8 @@ export default function Ledger() {
                 <div className="label mb-1">Call recording</div>
                 {rec ? (
                   <>
-                    <audio controls preload="none" src={`/recordings/${r.id}.ogg`} className="w-full" />
-                    <p className="label mt-1 normal-case tracking-normal">left channel: institution · right: Afterward</p>
+                    <audio controls preload="none" src={cond ? `/recordings/${r.id}.condensed.ogg` : `/recordings/${r.id}.ogg`} className="w-full" />
+                    <p className="label mt-1 normal-case tracking-normal">left: institution · right: Afterward{cond ? " · hold silence trimmed (full recording in the repo)" : ""}</p>
                   </>
                 ) : <p className="text-ink-muted">Recording pending upload.</p>}
                 <p className="mono mt-2 break-all text-[11px] text-ink-muted">session {r.sessionId}</p>

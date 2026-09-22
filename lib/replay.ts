@@ -55,7 +55,7 @@ export function fold(p: Prepared, tCard: number): CardView {
       case "line.audio": if (e.text) v.transcript.push({ who: "line", text: String(e.text) }); break;
       case "agent.said": v.transcript.push({ who: "afterward", text: String(e.text) }); break;
       case "amber": amber = true; v.amberQuestion = String((e as { question?: string }).question ?? "the missing detail"); break;
-      case "outcome.recorded": opened = true; v.ref = String((e as { reference?: string }).reference ?? p.run.outcome?.reference ?? ""); v.documents = (e as { documents?: string[] }).documents ?? p.run.outcome?.documents ?? []; v.justStamped = tCard - e.at < 700; break;
+      case "outcome.recorded": if (opened) break; opened = true; v.ref = String((e as { reference?: string }).reference ?? p.run.outcome?.reference ?? ""); v.documents = (e as { documents?: string[] }).documents ?? p.run.outcome?.documents ?? []; v.justStamped = tCard - e.at < 700; break;
       case "outcome.rejected": v.flash = tCard - e.at < 500; break;
       case "call.done": v.done = true; break;
     }

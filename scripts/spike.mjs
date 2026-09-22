@@ -3,7 +3,7 @@
 import { runCall } from "../lib/bridge/orchestrator.mjs";
 import fs from "node:fs"; import path from "node:path";
 const ROOT = path.resolve(import.meta.dirname, "..");
-for (const line of fs.readFileSync(path.join(ROOT, ".env.local"), "utf8").split("\n"))
+for (const line of (fs.existsSync(path.join(ROOT, ".env.local")) ? fs.readFileSync(path.join(ROOT, ".env.local"), "utf8") : "").split("\n"))
   if (line.includes("=")) { const [k, ...v] = line.split("="); process.env[k] ??= v.join("="); }
 
 const scenarioId = process.argv[2] ?? "northgate-energy";

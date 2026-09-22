@@ -26,5 +26,10 @@ check("every call has a sponsor-side recording artifact",
   runs.every((r) => fs.existsSync(path.join(ROOT, "public/recordings", r.id + ".ogg"))));
 check("every validator rejection was followed by a verified reference",
   runs.every((r) => r.rejections === 0 || (r.outcome && r.outcome.reference === r.expectedRef)));
+check("published totals match the raw runs (no hand-copied drift)",
+  fx.totals.calls === runs.length &&
+  fx.totals.ambers === runs.filter((r) => r.amber).length &&
+  fx.totals.rejectionsRecovered === runs.reduce((a, r) => a + (r.rejections ?? 0), 0) &&
+  fx.totals.totalCallSeconds === runs.reduce((a, r) => a + (r.seconds ?? 0), 0));
 console.log(`\n${pass} passed, ${fail} failed`);
 process.exit(fail ? 1 : 0);

@@ -20,9 +20,9 @@ phone — so a grieving family spends days on hold, retelling the death to a doz
 | Criterion | Evidence |
 |---|---|
 | **Application of Technology** | One live AssemblyAI **Voice Agent API** session per call (WS protocol notes: [docs/voice-agent-api-cheatsheet.md](docs/voice-agent-api-cheatsheet.md)); client-side tools (`press_key` DTMF, `flag_needs_family`, validated `record_outcome`); per-call keyterms; `transcription_mode` switched to `max_accuracy` right before the reference is spoken; sponsor-side **stereo session recordings** (left = institution, right = agent) as the evidence artifacts; turn detection against scripted IVR menus |
-| **Originality** | Nobody automates the *calls* — Empathy/Settld are forms and email. The refuse-to-guess Estate Ledger (verified refs + recordings) is a new artifact. Zero of ~110 entries in this hackathon touch bereavement |
+| **Originality** | Nobody automates the *calls* — Empathy/Settld are forms and email; check their sites. The refuse-to-guess Estate Ledger is a checkable artifact: verified refs, stereo recordings, and one real mid-call validator REFUSAL (Harberton & Vale, visible on the board and in `fixtures/runs.json`). In the event’s public gallery we found no other bereavement entry (checked Sep 22) |
 | **Business Value** | 650k UK / 2.8M US deaths a year; go-to-market through funeral directors' aftercare; Tell Us Once and the DNS prove institutions want structured notification — Afterward feeds DNS where it exists and calls everyone else |
-| **Presentation** | 4-minute video + deck in [docs/](docs/); the board demo needs no sign-in and replays real captured sessions |
+| **Presentation** | Deck: [docs/deck/afterward-deck.pdf](docs/deck/afterward-deck.pdf); video linked on the submission page; the board demo needs no sign-in and replays real captured sessions |
 
 ## What's real vs simulated (honesty box)
 
@@ -33,8 +33,8 @@ phone — so a grieving family spends days on hold, retelling the death to a doz
   test bed (IVR menus, hold music, clerk voices) modelled on real bereavement lines. **No real institution
   was told of a fictional death — that would be fraud, so we refuse to demo it.**
 - **Honest failure hunt:** we degraded one closing line to 6-bit audio at 1.35× speed to force a mishear;
-  the STT still captured the reference correctly in most runs — when it ever doesn't, the validator refuses
-  the write and the agent asks the clerk to repeat it. Premature record attempts were also refused (captured).
+  the STT still captured the reference correctly. The captured dataset holds one real refusal: a premature
+  record attempt on Harberton & Vale was rejected by the validator, re-asked, and re-verified on the same call.
 
 ## Measured on the seeded estate (full-length holds)
 

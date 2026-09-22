@@ -13,9 +13,10 @@ export default function Landing() {
         <div className="lg:col-span-5">
           <h1 className="text-[clamp(2.4rem,1.5rem+3vw,3.6rem)] leading-[1.08]">The calls after a death, made for you.</h1>
           <p className="mt-4 text-lg text-ink-muted">
-            One conversation with the family. Then Afterward phones every bank, insurer, utility and pension —
-            waits on hold, says it’s an AI, and brings back a case reference and a recording for every account.
-            It never guesses: anything missing comes back as a question, not an invention.
+            Not a receptionist, not a chatbot — a caller with a rulebook. One conversation with the family, then
+            Afterward phones every bank, insurer, utility and pension: waits on hold, says it’s an AI, and brings
+            back a verified case reference and a recording for every account. It never guesses — a validator can
+            refuse its own agent mid-call.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Link href="/board" className="btn-primary inline-flex items-center">Watch the board run</Link>
@@ -47,7 +48,7 @@ export default function Landing() {
             “You’ll also need to tell organisations outside government, like employers and private pension providers,
             banks, and utility companies.”
           </blockquote>
-          <p className="label mt-2">GOV.UK — “What to do after someone dies”. Tell Us Once covers government. Everyone else answers the phone.</p>
+          <p className="label mt-2">GOV.UK — “What to do after someone dies” (checked Sep 2026). Tell Us Once covers government. For everyone else the family fills a dozen forms — and still ends up in a phone queue for the ones that insist on a call.</p>
         </div>
       </section>
 
@@ -77,7 +78,7 @@ export default function Landing() {
                 <li>Every card replays a real AssemblyAI Voice Agent session — live speech-to-text, turn-taking, tool calls, TTS.</li>
                 <li>The reference numbers were heard, validated and recorded by the agent on those calls.</li>
                 <li>The recordings and timelines are the sponsor-side session artifacts, unedited.</li>
-                <li>The refusals are real: mismatched references were rejected by the validator mid-call.</li>
+                <li>The refusal is real: one mis-captured reference was rejected by the validator mid-call, re-asked, and re-verified (Harberton &amp; Vale — watch for the REFUSED event on the board).</li>
               </ul>
             </div>
             <div>
@@ -93,6 +94,16 @@ export default function Landing() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-14">
+        <h2 className="text-2xl">Nobody makes the calls</h2>
+        <div className="mt-5 grid gap-3 sm:grid-cols-4 text-sm">
+          <div className="card p-4"><div className="font-semibold">Tell Us Once</div><p className="mt-1 text-ink-muted">Government departments. One form. Free.</p></div>
+          <div className="card p-4"><div className="font-semibold">Death Notification Service</div><p className="mt-1 text-ink-muted">Member banks &amp; financial firms. A form — the banks then phone the family back.</p></div>
+          <div className="card p-4"><div className="font-semibold">Empathy · Settld</div><p className="mt-1 text-ink-muted">Broad, human-assisted, forms and email. Proof the category is real.</p></div>
+          <div className="card p-4" style={{borderColor:"var(--accent)"}}><div className="font-semibold" style={{color:"var(--accent)"}}>Afterward</div><p className="mt-1 text-ink-muted">Makes the call — menus, holds, clerks — and returns a verified reference + recording. Sold per estate through funeral directors’ aftercare, where the budget already exists.</p></div>
+        </div>
+      </section>
+
+      <section className="border-t border-line mx-auto max-w-6xl px-4 py-14">
         <div className="flex flex-wrap gap-10">
           <Big v={String(t.calls)} l="calls made" />
           <Big v={String(t.refsVerified)} l="references verified" />

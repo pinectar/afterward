@@ -5,6 +5,9 @@
 **Short description (≤ ~200 chars):**
 One conversation with the family, then a voice agent phones every bank, insurer, utility and pension — waits on hold, says it's an AI, and returns a verified case reference + recording per account.
 
+**Short description (≤150 chars fallback):**
+A voice agent that makes the calls after a death — holds, menus, clerks — and returns a verified case reference and recording for every account.
+
 **Long description:**
 When someone dies, the government's Tell Us Once service notifies government — and GOV.UK then tells the family: "You'll also need to tell organisations outside government, like employers and private pension providers, banks, and utility companies." That means days of phone queues, retelling the death to a dozen call centres, in the worst week of a family's life.
 
@@ -24,3 +27,5 @@ Market: 650k UK / 2.8M US deaths a year; distribution through funeral directors'
 **Video:** (MP4, 3:30–4:30 — see docs/deck/ and DEMO_SCRIPT.md)
 **Slides:** docs/deck/afterward-deck.pdf
 **Cover image:** docs/cover.png (1600×900)
+
+**NOTE:** if any capture is re-run, refresh the proof numbers in README, deck slide 5, and this file — `npm run verify` now asserts totals match the raw runs.
