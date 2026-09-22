@@ -40,3 +40,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 assets/tts-cache/
+demo/
+demo2/
+demokit/
+qa/
+graphify-out/
+.vercel/
