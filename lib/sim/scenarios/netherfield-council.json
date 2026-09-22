@@ -1,0 +1,21 @@
+{
+  "id": "netherfield-council",
+  "name": "Netherfield District Council",
+  "kind": "council",
+  "clerkVoice": "en-GB-LibbyNeural",
+  "ivrVoice": "en-GB-RyanNeural",
+  "holdSeconds": 70,
+  "ring": { "prompt": "Welcome to Netherfield District Council. Your call may be recorded. Lines are busy at the moment — please hold." },
+  "menu": { "prompt": "For bins and recycling, press one. For housing, press two. For planning, press three. For council tax, including bereavement, press four.", "correctKey": "4", "wrongKeyPrompt": "That wasn't a valid choice. Please select again from the menu." },
+  "holdAnnouncement": "You can also report most things on our website. Otherwise, please continue to hold and we'll answer as soon as we can.",
+  "clerk": {
+    "greeting": "Council tax team, this is Barbara speaking. I can see you've come through on the bereavement option — I'm sorry for your loss. Can I take the name of the person who's died?",
+    "turns": [
+      { "id": "NAME", "say": "", "expect": ["deceased_full_name"], "next": "DOD", "reprompt": "Sorry, could you give me that name once more?" },
+      { "id": "DOD", "say": "Thank you. And the date of death?", "expect": ["date_of_death"], "next": "REL", "reprompt": "The date again, please — I just want it right on the record." },
+      { "id": "REL", "say": "And are you the executor? Your name and relationship, please.", "expect": ["caller_name", "caller_relationship"], "next": "OUTCOME", "reprompt": "Just your name and how you're related, for our records." }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "NDC", "documents": ["death certificate; we may adjust the council tax with a single-person discount or an exemption while the property is empty"], "closing": "I've updated the council tax record, and any exemption will be applied from the date of death. Your reference is {REF}. You'll see the revised bill in the post." },
+  "quirk": "Applies the empty-property exemption from the date of death without being asked."
+}

@@ -1,0 +1,19 @@
+{
+  "id": "averley-water",
+  "name": "Averley Water",
+  "kind": "utility",
+  "clerkVoice": "en-GB-SoniaNeural",
+  "ivrVoice": "en-IE-EmilyNeural",
+  "holdSeconds": 22,
+  "ring": { "prompt": "Welcome to Averley Water. Calls may be recorded and monitored. Please choose from the following options." },
+  "menu": { "prompt": "To report a leak or a supply problem, press one. For a bereavement or a change of occupier, press two. For payments and metering, press three.", "correctKey": "2", "wrongKeyPrompt": "Sorry, that option wasn't recognised. Please try again." },
+  "holdAnnouncement": "You are moving up the queue. Thank you for holding.",
+  "clerk": {
+    "greeting": "Occupier services, Janet here. I'm so sorry for your loss. May I take the name of the account holder, and the date they passed away?",
+    "turns": [
+      { "id": "BOTH", "say": "", "expect": ["deceased_full_name", "date_of_death"], "next": "OUTCOME", "reprompt": "Sorry, my screen's being slow today — the full name and the date once more, please?" }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "AVW", "documents": ["nothing further if the property is being cleared; a copy of the death certificate only if the account was in credit"], "closing": "That's the account closed as of the date you've given me, and a final statement is on its way. Your reference is {REF}. All the best to you and the family." },
+  "quirk": "Shortest call of the set — one question, one reference, done."
+}

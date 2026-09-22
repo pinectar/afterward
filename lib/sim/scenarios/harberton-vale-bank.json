@@ -1,0 +1,21 @@
+{
+  "id": "harberton-vale-bank",
+  "name": "Harberton & Vale Bank",
+  "kind": "bank",
+  "clerkVoice": "en-GB-RyanNeural",
+  "ivrVoice": "en-GB-SoniaNeural",
+  "holdSeconds": 75,
+  "ring": { "prompt": "Thank you for calling Harberton and Vale Bank. Calls are recorded for security and training. You are currently sixth in the queue." },
+  "menu": { "prompt": "For online and mobile banking, press one. For payments and transfers, press two. For mortgages, press three. For bereavement and estate services, press four.", "correctKey": "4", "wrongKeyPrompt": "I'm sorry, that wasn't one of the options. Let's try that again." },
+  "holdAnnouncement": "All of our advisers are helping other customers. Please stay on the line and we'll be with you as soon as we can.",
+  "clerk": {
+    "greeting": "Estates team, this is Marcus. Firstly, I'm very sorry for your loss. May I start with the full name of the customer who has passed away?",
+    "turns": [
+      { "id": "NAME", "say": "", "expect": ["deceased_full_name"], "next": "DOD", "reprompt": "I do apologise — could you give me the full name once more, and spell the surname for me?" },
+      { "id": "DOD", "say": "Thank you. And what date did they pass away?", "expect": ["date_of_death"], "next": "CALLER", "reprompt": "Sorry, the line dipped there — the date of death again, please?" },
+      { "id": "CALLER", "say": "Nearly done. Can I take your own name, and your relationship to the customer?", "expect": ["caller_name", "caller_relationship"], "next": "OUTCOME", "reprompt": "Sorry — just your name, and how you're related to the customer?" }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "HVB", "documents": ["death certificate", "proof of the executor's identity"], "closing": "That's all registered and the accounts are now flagged with our estates team. Your reference is {REF}. Once we've seen the death certificate we'll write to the executor with the closing balances. Take care now." },
+  "quirk": "Full three-step verification — name, date, then caller details — but a clean green path throughout."
+}

@@ -1,0 +1,20 @@
+{
+  "id": "ashdown-home-insurance",
+  "name": "Ashdown Home Insurance",
+  "kind": "insurer",
+  "clerkVoice": "en-GB-MaisieNeural",
+  "ivrVoice": "en-IE-ConnorNeural",
+  "holdSeconds": 45,
+  "ring": { "prompt": "Ashdown Home Insurance. Calls are recorded for your protection. Please listen carefully to the following options." },
+  "menu": { "prompt": "To make a claim, press one. For renewals, press two. To notify us of a bereavement, press three. For all other queries, press four.", "correctKey": "3", "wrongKeyPrompt": "Sorry, I didn't get that. Please press one of the options on the menu." },
+  "holdAnnouncement": "Thank you for your patience. A member of the team will be with you shortly.",
+  "clerk": {
+    "greeting": "Hello, you're through to Poppy. I understand you're calling about a bereavement — I'm so sorry. Could I take the policyholder's full name and the date they passed away?",
+    "turns": [
+      { "id": "BOTH", "say": "", "expect": ["deceased_full_name", "date_of_death"], "next": "CALLER", "reprompt": "Sorry — the name exactly as it appears on the policy, and the date of death, please." },
+      { "id": "CALLER", "say": "Thank you. And your own name and relationship to the policyholder, just for the file?", "expect": ["caller_name", "caller_relationship"], "next": "OUTCOME", "reprompt": "And your name and how you're related, please — then we're all done." }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "AHI", "documents": ["death certificate copy", "a contact address for the executor"], "closing": "I've noted the policy, and cover on the property continues unchanged for now — the house stays insured while the estate is settled. Your reference is {REF}." },
+  "quirk": "Reassures the caller that the empty house stays covered while probate runs."
+}

@@ -1,0 +1,749 @@
+{
+  "generated": "2026-09-22T19:39:07.143Z",
+  "scenarios": {
+    "ashdown-home-insurance": {
+      "name": "Ashdown Home Insurance",
+      "ref": "AHI-1722",
+      "holdSeconds": 45,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/ashdown-home-insurance/ring.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/ring.pcm",
+          "seconds": 8.47,
+          "text": "Ashdown Home Insurance. Calls are recorded for your protection. Please listen carefully to the following options."
+        },
+        "menu": {
+          "mp3": "/clips/ashdown-home-insurance/menu.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/menu.pcm",
+          "seconds": 11.3,
+          "text": "To make a claim, press one. For renewals, press two. To notify us of a bereavement, press three. For all other queries, press four."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/ashdown-home-insurance/menu_wrong.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/menu_wrong.pcm",
+          "seconds": 5.54,
+          "text": "Sorry, I didn't get that. Please press one of the options on the menu."
+        },
+        "hold_announce": {
+          "mp3": "/clips/ashdown-home-insurance/hold_announce.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/hold_announce.pcm",
+          "seconds": 5.14,
+          "text": "Thank you for your patience. A member of the team will be with you shortly."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/ashdown-home-insurance/clerk_greeting.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/clerk_greeting.pcm",
+          "seconds": 11.76,
+          "text": "Hello, you're through to Poppy. I understand you're calling about a bereavement — I'm so sorry. Could I take the policyholder's full name and the date they passed away?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/ashdown-home-insurance/outcome_closing.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/outcome_closing.pcm",
+          "seconds": 12.79,
+          "text": "I've noted the policy, and cover on the property continues unchanged for now — the house stays insured while the estate is settled. Your reference is A H I,   1 7 2 2."
+        },
+        "turn_BOTH_reprompt": {
+          "mp3": "/clips/ashdown-home-insurance/turn_BOTH_reprompt.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/turn_BOTH_reprompt.pcm",
+          "seconds": 6.31,
+          "text": "Sorry — the name exactly as it appears on the policy, and the date of death, please."
+        },
+        "turn_CALLER_say": {
+          "mp3": "/clips/ashdown-home-insurance/turn_CALLER_say.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/turn_CALLER_say.pcm",
+          "seconds": 6.89,
+          "text": "Thank you. And your own name and relationship to the policyholder, just for the file?"
+        },
+        "turn_CALLER_reprompt": {
+          "mp3": "/clips/ashdown-home-insurance/turn_CALLER_reprompt.mp3",
+          "pcm": "assets/pcm/ashdown-home-insurance/turn_CALLER_reprompt.pcm",
+          "seconds": 4.68,
+          "text": "And your name and how you're related, please — then we're all done."
+        }
+      }
+    },
+    "averley-water": {
+      "name": "Averley Water",
+      "ref": "AVW-1958",
+      "holdSeconds": 22,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/averley-water/ring.mp3",
+          "pcm": "assets/pcm/averley-water/ring.pcm",
+          "seconds": 9.17,
+          "text": "Welcome to Averley Water. Calls may be recorded and monitored. Please choose from the following options."
+        },
+        "menu": {
+          "mp3": "/clips/averley-water/menu.mp3",
+          "pcm": "assets/pcm/averley-water/menu.pcm",
+          "seconds": 12.31,
+          "text": "To report a leak or a supply problem, press one. For a bereavement or a change of occupier, press two. For payments and metering, press three."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/averley-water/menu_wrong.mp3",
+          "pcm": "assets/pcm/averley-water/menu_wrong.pcm",
+          "seconds": 6.19,
+          "text": "Sorry, that option wasn't recognised. Please try again."
+        },
+        "hold_announce": {
+          "mp3": "/clips/averley-water/hold_announce.mp3",
+          "pcm": "assets/pcm/averley-water/hold_announce.pcm",
+          "seconds": 4.82,
+          "text": "You are moving up the queue. Thank you for holding."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/averley-water/clerk_greeting.mp3",
+          "pcm": "assets/pcm/averley-water/clerk_greeting.pcm",
+          "seconds": 9.31,
+          "text": "Occupier services, Janet here. I'm so sorry for your loss. May I take the name of the account holder, and the date they passed away?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/averley-water/outcome_closing.mp3",
+          "pcm": "assets/pcm/averley-water/outcome_closing.pcm",
+          "seconds": 11.66,
+          "text": "That's the account closed as of the date you've given me, and a final statement is on its way. Your reference is A V W,   1 9 5 8. All the best to you and the family."
+        },
+        "turn_BOTH_reprompt": {
+          "mp3": "/clips/averley-water/turn_BOTH_reprompt.mp3",
+          "pcm": "assets/pcm/averley-water/turn_BOTH_reprompt.pcm",
+          "seconds": 5.54,
+          "text": "Sorry, my screen's being slow today — the full name and the date once more, please?"
+        }
+      }
+    },
+    "brindle-broadband": {
+      "name": "Brindle Broadband",
+      "ref": "BRB-1058",
+      "holdSeconds": 55,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/brindle-broadband/ring.mp3",
+          "pcm": "assets/pcm/brindle-broadband/ring.pcm",
+          "seconds": 9.58,
+          "text": "Thanks for calling Brindle Broadband. We record calls for training and quality. You're in a queue and we'll answer as soon as we can."
+        },
+        "menu": {
+          "mp3": "/clips/brindle-broadband/menu.mp3",
+          "pcm": "assets/pcm/brindle-broadband/menu.pcm",
+          "seconds": 12.58,
+          "text": "If your broadband is down, press one. For account and billing, press two. To give notice on a contract, press three. For bereavement support, press four."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/brindle-broadband/menu_wrong.mp3",
+          "pcm": "assets/pcm/brindle-broadband/menu_wrong.pcm",
+          "seconds": 4.99,
+          "text": "That's not one I recognise, sorry. Have another go."
+        },
+        "hold_announce": {
+          "mp3": "/clips/brindle-broadband/hold_announce.mp3",
+          "pcm": "assets/pcm/brindle-broadband/hold_announce.pcm",
+          "seconds": 4.61,
+          "text": "Sorry for the wait — we're a small team, and we will get to you."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/brindle-broadband/clerk_greeting.mp3",
+          "pcm": "assets/pcm/brindle-broadband/clerk_greeting.pcm",
+          "seconds": 12.22,
+          "text": "Hello there, Niamh speaking on the customer care desk. I believe you're calling about a bereavement — I'm so sorry. Could I take the account holder's full name?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/brindle-broadband/outcome_closing.mp3",
+          "pcm": "assets/pcm/brindle-broadband/outcome_closing.pcm",
+          "seconds": 13.37,
+          "text": "I've ended the contract with no early-exit fee, and the router doesn't need to come back to us. Your reference is B R B,   1 0 5 8. Look after yourself."
+        },
+        "turn_NAME_reprompt": {
+          "mp3": "/clips/brindle-broadband/turn_NAME_reprompt.mp3",
+          "pcm": "assets/pcm/brindle-broadband/turn_NAME_reprompt.pcm",
+          "seconds": 4.97,
+          "text": "No bother — just the full name on the account, when you're ready."
+        },
+        "turn_DOD_say": {
+          "mp3": "/clips/brindle-broadband/turn_DOD_say.mp3",
+          "pcm": "assets/pcm/brindle-broadband/turn_DOD_say.pcm",
+          "seconds": 4.06,
+          "text": "Thank you. And when did they pass away?"
+        },
+        "turn_DOD_reprompt": {
+          "mp3": "/clips/brindle-broadband/turn_DOD_reprompt.mp3",
+          "pcm": "assets/pcm/brindle-broadband/turn_DOD_reprompt.pcm",
+          "seconds": 5.4,
+          "text": "Sorry, could I have the date again? No rush at all."
+        }
+      }
+    },
+    "caledonia-life": {
+      "name": "Caledonia Life",
+      "ref": "CAL-3206",
+      "holdSeconds": 50,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/caledonia-life/ring.mp3",
+          "pcm": "assets/pcm/caledonia-life/ring.pcm",
+          "seconds": 8.3,
+          "text": "Caledonia Life. Calls are recorded. If you are calling about a bereavement, please stay on the line."
+        },
+        "menu": {
+          "mp3": "/clips/caledonia-life/menu.mp3",
+          "pcm": "assets/pcm/caledonia-life/menu.pcm",
+          "seconds": 9.02,
+          "text": "For new policies, press one. For claims, press two. For bereavement notifications, press three."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/caledonia-life/menu_wrong.mp3",
+          "pcm": "assets/pcm/caledonia-life/menu_wrong.pcm",
+          "seconds": 2.66,
+          "text": "That option wasn't recognised."
+        },
+        "hold_announce": {
+          "mp3": "/clips/caledonia-life/hold_announce.mp3",
+          "pcm": "assets/pcm/caledonia-life/hold_announce.pcm",
+          "seconds": 6.6,
+          "text": "Please continue to hold. A member of our specialist team will answer as soon as possible."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/caledonia-life/clerk_greeting.mp3",
+          "pcm": "assets/pcm/caledonia-life/clerk_greeting.pcm",
+          "seconds": 9.48,
+          "text": "Specialist team, Alan speaking. My condolences. May I take the policyholder's full name and date of death?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/caledonia-life/outcome_closing.mp3",
+          "pcm": "assets/pcm/caledonia-life/outcome_closing.pcm",
+          "seconds": 14.4,
+          "text": "That's noted, and the policy is flagged. Your reference is C A L,   3 2 0 6. The claims pack goes out today. Is the address on file still correct for the executor?"
+        },
+        "turn_NAME_reprompt": {
+          "mp3": "/clips/caledonia-life/turn_NAME_reprompt.mp3",
+          "pcm": "assets/pcm/caledonia-life/turn_NAME_reprompt.pcm",
+          "seconds": 6.19,
+          "text": "Could you repeat the date of death for me? I need it exactly as on the certificate."
+        }
+      }
+    },
+    "foxglove-tv": {
+      "name": "Foxglove TV",
+      "ref": "FXG-5033",
+      "holdSeconds": 20,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/foxglove-tv/ring.mp3",
+          "pcm": "assets/pcm/foxglove-tv/ring.pcm",
+          "seconds": 7.34,
+          "text": "Foxglove TV member services. Calls are recorded for quality. Please hold for the options."
+        },
+        "menu": {
+          "mp3": "/clips/foxglove-tv/menu.mp3",
+          "pcm": "assets/pcm/foxglove-tv/menu.pcm",
+          "seconds": 10.03,
+          "text": "For billing and payments, press one. For help with the app, press two. To cancel a membership, including after a bereavement, press three."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/foxglove-tv/menu_wrong.mp3",
+          "pcm": "assets/pcm/foxglove-tv/menu_wrong.pcm",
+          "seconds": 4.75,
+          "text": "Sorry, that didn't come through. Please pick from the menu again."
+        },
+        "hold_announce": {
+          "mp3": "/clips/foxglove-tv/hold_announce.mp3",
+          "pcm": "assets/pcm/foxglove-tv/hold_announce.pcm",
+          "seconds": 2.83,
+          "text": "Thanks for holding — we'll be right with you."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/foxglove-tv/clerk_greeting.mp3",
+          "pcm": "assets/pcm/foxglove-tv/clerk_greeting.pcm",
+          "seconds": 10.1,
+          "text": "Hi, this is Cormac at Foxglove. I'm sorry you're calling in these circumstances. Can I take the member's full name and the date they passed away?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/foxglove-tv/outcome_closing.mp3",
+          "pcm": "assets/pcm/foxglove-tv/outcome_closing.pcm",
+          "seconds": 11.57,
+          "text": "That's the membership cancelled straight away, and this month's charge is refunded to the card. Your reference is F X G,   5 0 3 3. Take good care."
+        },
+        "turn_BOTH_reprompt": {
+          "mp3": "/clips/foxglove-tv/turn_BOTH_reprompt.mp3",
+          "pcm": "assets/pcm/foxglove-tv/turn_BOTH_reprompt.pcm",
+          "seconds": 4.8,
+          "text": "Sorry — just the name on the membership and the date, whenever you're ready."
+        }
+      }
+    },
+    "harberton-vale-bank": {
+      "name": "Harberton & Vale Bank",
+      "ref": "HVB-4300",
+      "holdSeconds": 75,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/harberton-vale-bank/ring.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/ring.pcm",
+          "seconds": 8.9,
+          "text": "Thank you for calling Harberton and Vale Bank. Calls are recorded for security and training. You are currently sixth in the queue."
+        },
+        "menu": {
+          "mp3": "/clips/harberton-vale-bank/menu.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/menu.pcm",
+          "seconds": 12.55,
+          "text": "For online and mobile banking, press one. For payments and transfers, press two. For mortgages, press three. For bereavement and estate services, press four."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/harberton-vale-bank/menu_wrong.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/menu_wrong.pcm",
+          "seconds": 4.87,
+          "text": "I'm sorry, that wasn't one of the options. Let's try that again."
+        },
+        "hold_announce": {
+          "mp3": "/clips/harberton-vale-bank/hold_announce.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/hold_announce.pcm",
+          "seconds": 7.15,
+          "text": "All of our advisers are helping other customers. Please stay on the line and we'll be with you as soon as we can."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/harberton-vale-bank/clerk_greeting.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/clerk_greeting.pcm",
+          "seconds": 10.32,
+          "text": "Estates team, this is Marcus. Firstly, I'm very sorry for your loss. May I start with the full name of the customer who has passed away?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/harberton-vale-bank/outcome_closing.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/outcome_closing.pcm",
+          "seconds": 15.82,
+          "text": "That's all registered and the accounts are now flagged with our estates team. Your reference is H V B,   4 3 0 0. Once we've seen the death certificate we'll write to the executor with the closing balances. Take care now."
+        },
+        "turn_NAME_reprompt": {
+          "mp3": "/clips/harberton-vale-bank/turn_NAME_reprompt.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/turn_NAME_reprompt.pcm",
+          "seconds": 5.64,
+          "text": "I do apologise — could you give me the full name once more, and spell the surname for me?"
+        },
+        "turn_DOD_say": {
+          "mp3": "/clips/harberton-vale-bank/turn_DOD_say.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/turn_DOD_say.pcm",
+          "seconds": 4.22,
+          "text": "Thank you. And what date did they pass away?"
+        },
+        "turn_DOD_reprompt": {
+          "mp3": "/clips/harberton-vale-bank/turn_DOD_reprompt.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/turn_DOD_reprompt.pcm",
+          "seconds": 4.46,
+          "text": "Sorry, the line dipped there — the date of death again, please?"
+        },
+        "turn_CALLER_say": {
+          "mp3": "/clips/harberton-vale-bank/turn_CALLER_say.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/turn_CALLER_say.pcm",
+          "seconds": 5.78,
+          "text": "Nearly done. Can I take your own name, and your relationship to the customer?"
+        },
+        "turn_CALLER_reprompt": {
+          "mp3": "/clips/harberton-vale-bank/turn_CALLER_reprompt.mp3",
+          "pcm": "assets/pcm/harberton-vale-bank/turn_CALLER_reprompt.pcm",
+          "seconds": 4.39,
+          "text": "Sorry — just your name, and how you're related to the customer?"
+        }
+      }
+    },
+    "kestrel-mobile": {
+      "name": "Kestrel Mobile",
+      "ref": "KSM-7580",
+      "holdSeconds": 30,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/kestrel-mobile/ring.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/ring.pcm",
+          "seconds": 9.7,
+          "text": "You've reached Kestrel Mobile. Calls are recorded for training. Hold the line, please, while we take you through the options."
+        },
+        "menu": {
+          "mp3": "/clips/kestrel-mobile/menu.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/menu.pcm",
+          "seconds": 13.25,
+          "text": "For upgrades, press one. For billing, press two. To close or transfer an account after a bereavement, press three. For technical support, press four."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/kestrel-mobile/menu_wrong.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/menu_wrong.pcm",
+          "seconds": 5.35,
+          "text": "Hmm, that didn't work. Give it another go from the menu."
+        },
+        "hold_announce": {
+          "mp3": "/clips/kestrel-mobile/hold_announce.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/hold_announce.pcm",
+          "seconds": 6.6,
+          "text": "Did you know you can manage most things in the Kestrel app? An adviser will be with you soon."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/kestrel-mobile/clerk_greeting.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/clerk_greeting.pcm",
+          "seconds": 12.22,
+          "text": "Hiya, you're through to Dara at Kestrel. I can see you've come through the bereavement line — I'm very sorry to hear that. Could you give me the account holder's full name, and the date they passed away?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/kestrel-mobile/outcome_closing.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/outcome_closing.pcm",
+          "seconds": 11.5,
+          "text": "I've closed the account from today and cleared the final bill, so there's nothing to pay. Your reference is K S M,   7 5 8 0. Mind yourself now."
+        },
+        "turn_DETAILS_reprompt": {
+          "mp3": "/clips/kestrel-mobile/turn_DETAILS_reprompt.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/turn_DETAILS_reprompt.pcm",
+          "seconds": 5.74,
+          "text": "No rush at all — just the full name on the account and the date they passed, when you're ready."
+        },
+        "turn_REL_say": {
+          "mp3": "/clips/kestrel-mobile/turn_REL_say.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/turn_REL_say.pcm",
+          "seconds": 5.04,
+          "text": "Thanks for that. And can I take your own name and your relationship to them?"
+        },
+        "turn_REL_reprompt": {
+          "mp3": "/clips/kestrel-mobile/turn_REL_reprompt.mp3",
+          "pcm": "assets/pcm/kestrel-mobile/turn_REL_reprompt.pcm",
+          "seconds": 3.94,
+          "text": "Just your name and how you're related, and we're nearly done."
+        }
+      }
+    },
+    "netherfield-council": {
+      "name": "Netherfield District Council",
+      "ref": "NDC-8838",
+      "holdSeconds": 70,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/netherfield-council/ring.mp3",
+          "pcm": "assets/pcm/netherfield-council/ring.pcm",
+          "seconds": 8.98,
+          "text": "Welcome to Netherfield District Council. Your call may be recorded. Lines are busy at the moment — please hold."
+        },
+        "menu": {
+          "mp3": "/clips/netherfield-council/menu.mp3",
+          "pcm": "assets/pcm/netherfield-council/menu.pcm",
+          "seconds": 12.6,
+          "text": "For bins and recycling, press one. For housing, press two. For planning, press three. For council tax, including bereavement, press four."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/netherfield-council/menu_wrong.mp3",
+          "pcm": "assets/pcm/netherfield-council/menu_wrong.pcm",
+          "seconds": 4.99,
+          "text": "That wasn't a valid choice. Please select again from the menu."
+        },
+        "hold_announce": {
+          "mp3": "/clips/netherfield-council/hold_announce.mp3",
+          "pcm": "assets/pcm/netherfield-council/hold_announce.pcm",
+          "seconds": 8.23,
+          "text": "You can also report most things on our website. Otherwise, please continue to hold and we'll answer as soon as we can."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/netherfield-council/clerk_greeting.mp3",
+          "pcm": "assets/pcm/netherfield-council/clerk_greeting.pcm",
+          "seconds": 12.24,
+          "text": "Council tax team, this is Barbara speaking. I can see you've come through on the bereavement option — I'm sorry for your loss. Can I take the name of the person who's died?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/netherfield-council/outcome_closing.mp3",
+          "pcm": "assets/pcm/netherfield-council/outcome_closing.pcm",
+          "seconds": 14.11,
+          "text": "I've updated the council tax record, and any exemption will be applied from the date of death. Your reference is N D C,   8 8 3 8. You'll see the revised bill in the post."
+        },
+        "turn_NAME_reprompt": {
+          "mp3": "/clips/netherfield-council/turn_NAME_reprompt.mp3",
+          "pcm": "assets/pcm/netherfield-council/turn_NAME_reprompt.pcm",
+          "seconds": 3.77,
+          "text": "Sorry, could you give me that name once more?"
+        },
+        "turn_DOD_say": {
+          "mp3": "/clips/netherfield-council/turn_DOD_say.mp3",
+          "pcm": "assets/pcm/netherfield-council/turn_DOD_say.pcm",
+          "seconds": 3.62,
+          "text": "Thank you. And the date of death?"
+        },
+        "turn_DOD_reprompt": {
+          "mp3": "/clips/netherfield-council/turn_DOD_reprompt.mp3",
+          "pcm": "assets/pcm/netherfield-council/turn_DOD_reprompt.pcm",
+          "seconds": 4.73,
+          "text": "The date again, please — I just want it right on the record."
+        },
+        "turn_REL_say": {
+          "mp3": "/clips/netherfield-council/turn_REL_say.mp3",
+          "pcm": "assets/pcm/netherfield-council/turn_REL_say.pcm",
+          "seconds": 5.5,
+          "text": "And are you the executor? Your name and relationship, please."
+        },
+        "turn_REL_reprompt": {
+          "mp3": "/clips/netherfield-council/turn_REL_reprompt.mp3",
+          "pcm": "assets/pcm/netherfield-council/turn_REL_reprompt.pcm",
+          "seconds": 4.46,
+          "text": "Just your name and how you're related, for our records."
+        }
+      }
+    },
+    "northgate-energy": {
+      "name": "Northgate Energy",
+      "ref": "NGE-4102",
+      "holdSeconds": 35,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/northgate-energy/ring.mp3",
+          "pcm": "assets/pcm/northgate-energy/ring.pcm",
+          "seconds": 8.11,
+          "text": "You're through to Northgate Energy. This call may be recorded. Please hold while we connect you."
+        },
+        "menu": {
+          "mp3": "/clips/northgate-energy/menu.mp3",
+          "pcm": "assets/pcm/northgate-energy/menu.pcm",
+          "seconds": 10.7,
+          "text": "For meter readings, press one. For payments, press two. To tell us about a bereavement or change of tenancy, press three."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/northgate-energy/menu_wrong.mp3",
+          "pcm": "assets/pcm/northgate-energy/menu_wrong.pcm",
+          "seconds": 4.39,
+          "text": "I didn't catch that. Please choose again."
+        },
+        "hold_announce": {
+          "mp3": "/clips/northgate-energy/hold_announce.mp3",
+          "pcm": "assets/pcm/northgate-energy/hold_announce.pcm",
+          "seconds": 6.14,
+          "text": "We're experiencing a high volume of calls. Thank you for your patience."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/northgate-energy/clerk_greeting.mp3",
+          "pcm": "assets/pcm/northgate-energy/clerk_greeting.pcm",
+          "seconds": 5.66,
+          "text": "Hello, you're through to Priya on the care team. How can I help today?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/northgate-energy/outcome_closing.mp3",
+          "pcm": "assets/pcm/northgate-energy/outcome_closing.pcm",
+          "seconds": 12.07,
+          "text": "I've registered the bereavement and paused all reminders. Your reference is N G E,   4 1 0 2. We'll write out with the next steps. Take care."
+        },
+        "turn_NAME_reprompt": {
+          "mp3": "/clips/northgate-energy/turn_NAME_reprompt.mp3",
+          "pcm": "assets/pcm/northgate-energy/turn_NAME_reprompt.pcm",
+          "seconds": 4.85,
+          "text": "I'm sorry — could I have the customer's full name and the date they passed away?"
+        },
+        "turn_REL_say": {
+          "mp3": "/clips/northgate-energy/turn_REL_say.mp3",
+          "pcm": "assets/pcm/northgate-energy/turn_REL_say.pcm",
+          "seconds": 6.62,
+          "text": "Thank you, and I'm sorry for your loss. Can I ask your name and your relationship to the customer?"
+        },
+        "turn_REL_reprompt": {
+          "mp3": "/clips/northgate-energy/turn_REL_reprompt.mp3",
+          "pcm": "assets/pcm/northgate-energy/turn_REL_reprompt.pcm",
+          "seconds": 3.53,
+          "text": "Sorry, and your relationship to the account holder?"
+        }
+      }
+    },
+    "pennard-card-services": {
+      "name": "Pennard Card Services",
+      "ref": "PCS-6764",
+      "holdSeconds": 85,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/pennard-card-services/ring.mp3",
+          "pcm": "assets/pcm/pennard-card-services/ring.pcm",
+          "seconds": 10.9,
+          "text": "Pennard Card Services. All calls are recorded. Please have the cardholder's details ready if you can. You are in a queue."
+        },
+        "menu": {
+          "mp3": "/clips/pennard-card-services/menu.mp3",
+          "pcm": "assets/pcm/pennard-card-services/menu.pcm",
+          "seconds": 12.91,
+          "text": "To make a payment, press one. To report a bereavement, press two. To report a lost or stolen card, press three. For anything else, press four."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/pennard-card-services/menu_wrong.mp3",
+          "pcm": "assets/pcm/pennard-card-services/menu_wrong.pcm",
+          "seconds": 5.74,
+          "text": "I'm sorry, that wasn't a valid selection. Please choose again."
+        },
+        "hold_announce": {
+          "mp3": "/clips/pennard-card-services/hold_announce.mp3",
+          "pcm": "assets/pcm/pennard-card-services/hold_announce.pcm",
+          "seconds": 5.93,
+          "text": "Please continue to hold. Your call will be answered in strict rotation."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/pennard-card-services/clerk_greeting.mp3",
+          "pcm": "assets/pcm/pennard-card-services/clerk_greeting.pcm",
+          "seconds": 9.31,
+          "text": "Bereavement support, Geoffrey speaking. May I say how sorry I am for your loss. Could I take the cardholder's full name?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/pennard-card-services/outcome_closing.mp3",
+          "pcm": "assets/pcm/pennard-card-services/outcome_closing.pcm",
+          "seconds": 14.78,
+          "text": "The card is cancelled and the balance is frozen — no interest, no collections, and nothing for you to pay now. Your reference is P C S,   6 7 6 4. Our estates team will write to the executor directly."
+        },
+        "turn_NAME_reprompt": {
+          "mp3": "/clips/pennard-card-services/turn_NAME_reprompt.mp3",
+          "pcm": "assets/pcm/pennard-card-services/turn_NAME_reprompt.pcm",
+          "seconds": 5.71,
+          "text": "My apologies — the cardholder's full name again, with the surname spelt out if you would."
+        },
+        "turn_DOD_say": {
+          "mp3": "/clips/pennard-card-services/turn_DOD_say.mp3",
+          "pcm": "assets/pcm/pennard-card-services/turn_DOD_say.pcm",
+          "seconds": 3.5,
+          "text": "Thank you. And the date of death?"
+        },
+        "turn_DOD_reprompt": {
+          "mp3": "/clips/pennard-card-services/turn_DOD_reprompt.mp3",
+          "pcm": "assets/pcm/pennard-card-services/turn_DOD_reprompt.pcm",
+          "seconds": 3.14,
+          "text": "Could you repeat that date for me, please?"
+        },
+        "turn_REL_say": {
+          "mp3": "/clips/pennard-card-services/turn_REL_say.mp3",
+          "pcm": "assets/pcm/pennard-card-services/turn_REL_say.pcm",
+          "seconds": 5.78,
+          "text": "And am I speaking with a family member? Your name and relationship, please."
+        },
+        "turn_REL_reprompt": {
+          "mp3": "/clips/pennard-card-services/turn_REL_reprompt.mp3",
+          "pcm": "assets/pcm/pennard-card-services/turn_REL_reprompt.pcm",
+          "seconds": 4.3,
+          "text": "Just your name and your relationship to the cardholder, please."
+        }
+      }
+    },
+    "silverbeck-pensions": {
+      "name": "Silverbeck Pensions",
+      "ref": "SVP-8564",
+      "holdSeconds": 40,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/silverbeck-pensions/ring.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/ring.pcm",
+          "seconds": 8.98,
+          "text": "Welcome to Silverbeck Pensions. For quality purposes your call may be recorded. Please listen to the following options."
+        },
+        "menu": {
+          "mp3": "/clips/silverbeck-pensions/menu.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/menu.pcm",
+          "seconds": 11.95,
+          "text": "For annual statements, press one. To report the death of a member, press two. For transfers, press three. For all other enquiries, press four."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/silverbeck-pensions/menu_wrong.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/menu_wrong.pcm",
+          "seconds": 5.26,
+          "text": "That key wasn't recognised. Please choose from the options again."
+        },
+        "hold_announce": {
+          "mp3": "/clips/silverbeck-pensions/hold_announce.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/hold_announce.pcm",
+          "seconds": 5.54,
+          "text": "Thank you for waiting. A member of our pensions team will be with you shortly."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/silverbeck-pensions/clerk_greeting.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/clerk_greeting.pcm",
+          "seconds": 7.94,
+          "text": "Bereavement line, Eileen speaking — please accept my condolences. Could I take the member's full name?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/silverbeck-pensions/outcome_closing.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/outcome_closing.pcm",
+          "seconds": 16.58,
+          "text": "I've marked the member's record and stopped any payments going out, so nothing needs paying back later. Your reference is S V P,   8 5 6 4. Our bereavement pack will be with the executor within five working days."
+        },
+        "turn_NAME_reprompt": {
+          "mp3": "/clips/silverbeck-pensions/turn_NAME_reprompt.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/turn_NAME_reprompt.pcm",
+          "seconds": 5.18,
+          "text": "Sorry, could you say the member's name again for me, nice and slowly?"
+        },
+        "turn_DOD_say": {
+          "mp3": "/clips/silverbeck-pensions/turn_DOD_say.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/turn_DOD_say.pcm",
+          "seconds": 5.64,
+          "text": "Thank you. And the date of death, as it will appear on the certificate?"
+        },
+        "turn_DOD_reprompt": {
+          "mp3": "/clips/silverbeck-pensions/turn_DOD_reprompt.mp3",
+          "pcm": "assets/pcm/silverbeck-pensions/turn_DOD_reprompt.pcm",
+          "seconds": 3.29,
+          "text": "Could I have that date once more, please?"
+        }
+      }
+    },
+    "wessex-bs": {
+      "name": "Wessex Building Society",
+      "ref": "WBS-3098",
+      "holdSeconds": 60,
+      "clips": {
+        "ring": {
+          "mp3": "/clips/wessex-bs/ring.mp3",
+          "pcm": "assets/pcm/wessex-bs/ring.pcm",
+          "seconds": 8.38,
+          "text": "Welcome to Wessex Building Society. Calls are recorded for training and quality. You are number four in the queue."
+        },
+        "menu": {
+          "mp3": "/clips/wessex-bs/menu.mp3",
+          "pcm": "assets/pcm/wessex-bs/menu.pcm",
+          "seconds": 12.41,
+          "text": "For balances and payments, press one. To report a lost card, press two. For bereavement services, press three. For anything else, press four."
+        },
+        "menu_wrong": {
+          "mp3": "/clips/wessex-bs/menu_wrong.mp3",
+          "pcm": "assets/pcm/wessex-bs/menu_wrong.pcm",
+          "seconds": 4.87,
+          "text": "Sorry, that isn't a valid option. Please try again."
+        },
+        "hold_announce": {
+          "mp3": "/clips/wessex-bs/hold_announce.mp3",
+          "pcm": "assets/pcm/wessex-bs/hold_announce.pcm",
+          "seconds": 7.27,
+          "text": "Thank you for holding. Your call is important to us. An adviser will be with you shortly."
+        },
+        "clerk_greeting": {
+          "mp3": "/clips/wessex-bs/clerk_greeting.mp3",
+          "pcm": "assets/pcm/wessex-bs/clerk_greeting.pcm",
+          "seconds": 8.62,
+          "text": "Bereavement team, Susan speaking. I'm sorry for your loss. Can I take the full name of the account holder who has passed away?"
+        },
+        "outcome_closing": {
+          "mp3": "/clips/wessex-bs/outcome_closing.mp3",
+          "pcm": "assets/pcm/wessex-bs/outcome_closing.pcm",
+          "seconds": 12.65,
+          "text": "I've opened a bereavement case, your reference is W B S,   3 0 9 8. We will need the account number, or the branch can trace it with the death certificate. Is there anything else?"
+        },
+        "turn_NAME_reprompt": {
+          "mp3": "/clips/wessex-bs/turn_NAME_reprompt.mp3",
+          "pcm": "assets/pcm/wessex-bs/turn_NAME_reprompt.pcm",
+          "seconds": 3,
+          "text": "Sorry, could you spell the surname for me?"
+        },
+        "turn_DOD_say": {
+          "mp3": "/clips/wessex-bs/turn_DOD_say.mp3",
+          "pcm": "assets/pcm/wessex-bs/turn_DOD_say.pcm",
+          "seconds": 3.22,
+          "text": "Thank you. And the date they passed away?"
+        },
+        "turn_DOD_reprompt": {
+          "mp3": "/clips/wessex-bs/turn_DOD_reprompt.mp3",
+          "pcm": "assets/pcm/wessex-bs/turn_DOD_reprompt.pcm",
+          "seconds": 2.9,
+          "text": "Sorry, could you give me that date again?"
+        },
+        "turn_ACCT_say": {
+          "mp3": "/clips/wessex-bs/turn_ACCT_say.mp3",
+          "pcm": "assets/pcm/wessex-bs/turn_ACCT_say.pcm",
+          "seconds": 3.67,
+          "text": "And do you have the account number or the sort code to hand?"
+        },
+        "turn_ACCT_reprompt": {
+          "mp3": "/clips/wessex-bs/turn_ACCT_reprompt.mp3",
+          "pcm": "assets/pcm/wessex-bs/turn_ACCT_reprompt.pcm",
+          "seconds": 3.31,
+          "text": "No trouble at all — we can trace it another way."
+        }
+      }
+    }
+  }
+}

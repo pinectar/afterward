@@ -1,0 +1,19 @@
+{
+  "id": "foxglove-tv",
+  "name": "Foxglove TV",
+  "kind": "telecom",
+  "clerkVoice": "en-IE-ConnorNeural",
+  "ivrVoice": "en-GB-SoniaNeural",
+  "holdSeconds": 20,
+  "ring": { "prompt": "Foxglove TV member services. Calls are recorded for quality. Please hold for the options." },
+  "menu": { "prompt": "For billing and payments, press one. For help with the app, press two. To cancel a membership, including after a bereavement, press three.", "correctKey": "3", "wrongKeyPrompt": "Sorry, that didn't come through. Please pick from the menu again." },
+  "holdAnnouncement": "Thanks for holding — we'll be right with you.",
+  "clerk": {
+    "greeting": "Hi, this is Cormac at Foxglove. I'm sorry you're calling in these circumstances. Can I take the member's full name and the date they passed away?",
+    "turns": [
+      { "id": "BOTH", "say": "", "expect": ["deceased_full_name", "date_of_death"], "next": "OUTCOME", "reprompt": "Sorry — just the name on the membership and the date, whenever you're ready." }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "FXG", "documents": ["none — we don't ask for paperwork to close a membership"], "closing": "That's the membership cancelled straight away, and this month's charge is refunded to the card. Your reference is {REF}. Take good care." },
+  "quirk": "No paperwork at all — cancels and refunds in a single turn."
+}

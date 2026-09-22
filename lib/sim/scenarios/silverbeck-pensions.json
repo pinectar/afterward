@@ -1,0 +1,20 @@
+{
+  "id": "silverbeck-pensions",
+  "name": "Silverbeck Pensions",
+  "kind": "pension",
+  "clerkVoice": "en-GB-LibbyNeural",
+  "ivrVoice": "en-GB-ThomasNeural",
+  "holdSeconds": 40,
+  "ring": { "prompt": "Welcome to Silverbeck Pensions. For quality purposes your call may be recorded. Please listen to the following options." },
+  "menu": { "prompt": "For annual statements, press one. To report the death of a member, press two. For transfers, press three. For all other enquiries, press four.", "correctKey": "2", "wrongKeyPrompt": "That key wasn't recognised. Please choose from the options again." },
+  "holdAnnouncement": "Thank you for waiting. A member of our pensions team will be with you shortly.",
+  "clerk": {
+    "greeting": "Bereavement line, Eileen speaking — please accept my condolences. Could I take the member's full name?",
+    "turns": [
+      { "id": "NAME", "say": "", "expect": ["deceased_full_name"], "next": "DOD", "reprompt": "Sorry, could you say the member's name again for me, nice and slowly?" },
+      { "id": "DOD", "say": "Thank you. And the date of death, as it will appear on the certificate?", "expect": ["date_of_death"], "next": "OUTCOME", "reprompt": "Could I have that date once more, please?" }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "SVP", "documents": ["death certificate", "the executor's details"], "closing": "I've marked the member's record and stopped any payments going out, so nothing needs paying back later. Your reference is {REF}. Our bereavement pack will be with the executor within five working days." },
+  "quirk": "Stops pension payments on the spot so the estate never has to return an overpayment."
+}

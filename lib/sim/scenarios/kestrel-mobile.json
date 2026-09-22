@@ -1,0 +1,20 @@
+{
+  "id": "kestrel-mobile",
+  "name": "Kestrel Mobile",
+  "kind": "telecom",
+  "clerkVoice": "en-IE-ConnorNeural",
+  "ivrVoice": "en-GB-MaisieNeural",
+  "holdSeconds": 30,
+  "ring": { "prompt": "You've reached Kestrel Mobile. Calls are recorded for training. Hold the line, please, while we take you through the options." },
+  "menu": { "prompt": "For upgrades, press one. For billing, press two. To close or transfer an account after a bereavement, press three. For technical support, press four.", "correctKey": "3", "wrongKeyPrompt": "Hmm, that didn't work. Give it another go from the menu." },
+  "holdAnnouncement": "Did you know you can manage most things in the Kestrel app? An adviser will be with you soon.",
+  "clerk": {
+    "greeting": "Hiya, you're through to Dara at Kestrel. I can see you've come through the bereavement line — I'm very sorry to hear that. Could you give me the account holder's full name, and the date they passed away?",
+    "turns": [
+      { "id": "DETAILS", "say": "", "expect": ["deceased_full_name", "date_of_death"], "next": "REL", "reprompt": "No rush at all — just the full name on the account and the date they passed, when you're ready." },
+      { "id": "REL", "say": "Thanks for that. And can I take your own name and your relationship to them?", "expect": ["caller_name", "caller_relationship"], "next": "OUTCOME", "reprompt": "Just your name and how you're related, and we're nearly done." }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "KSM", "documents": ["a copy of the death certificate — a photo uploaded in the app is fine"], "closing": "I've closed the account from today and cleared the final bill, so there's nothing to pay. Your reference is {REF}. Mind yourself now." },
+  "quirk": "Waives the final bill on the call — the friendliest script of the twelve."
+}

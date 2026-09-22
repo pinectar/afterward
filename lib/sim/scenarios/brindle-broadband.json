@@ -1,0 +1,20 @@
+{
+  "id": "brindle-broadband",
+  "name": "Brindle Broadband",
+  "kind": "telecom",
+  "clerkVoice": "en-IE-EmilyNeural",
+  "ivrVoice": "en-GB-RyanNeural",
+  "holdSeconds": 55,
+  "ring": { "prompt": "Thanks for calling Brindle Broadband. We record calls for training and quality. You're in a queue and we'll answer as soon as we can." },
+  "menu": { "prompt": "If your broadband is down, press one. For account and billing, press two. To give notice on a contract, press three. For bereavement support, press four.", "correctKey": "4", "wrongKeyPrompt": "That's not one I recognise, sorry. Have another go." },
+  "holdAnnouncement": "Sorry for the wait — we're a small team, and we will get to you.",
+  "clerk": {
+    "greeting": "Hello there, Niamh speaking on the customer care desk. I believe you're calling about a bereavement — I'm so sorry. Could I take the account holder's full name?",
+    "turns": [
+      { "id": "NAME", "say": "", "expect": ["deceased_full_name"], "next": "DOD", "reprompt": "No bother — just the full name on the account, when you're ready." },
+      { "id": "DOD", "say": "Thank you. And when did they pass away?", "expect": ["date_of_death"], "next": "OUTCOME", "reprompt": "Sorry, could I have the date again? No rush at all." }
+    ]
+  },
+  "outcome": { "type": "case_opened", "refPrefix": "BRB", "documents": ["no documents needed to close the line; a death certificate copy only if a refund is due to the estate"], "closing": "I've ended the contract with no early-exit fee, and the router doesn't need to come back to us. Your reference is {REF}. Look after yourself." },
+  "quirk": "Waives the early-exit fee and doesn't ask for the equipment back."
+}
