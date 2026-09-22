@@ -9,7 +9,7 @@ const fixtures = raw as unknown as Fixtures;
 
 export default function Board() {
   const preps = useMemo(() => fixtures.runs.filter((r) => !r.error).map(prepare), []);
-  const total = useMemo(() => Math.max(...preps.map((p, i) => i * STAGGER_MS + p.duration)), [preps]);
+  const total = useMemo(() => preps.length ? Math.max(...preps.map((p, i) => i * STAGGER_MS + p.duration)) : 0, [preps]);
   const [t, setT] = useState(0);
   const [playing, setPlaying] = useState(true);
   const last = useRef<number | null>(null);

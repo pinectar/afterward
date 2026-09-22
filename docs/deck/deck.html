@@ -1,0 +1,144 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Afterward — deck</title>
+<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Familjen+Grotesk:wght@400;600&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root{--canvas:#F1EFEA;--s1:#FAF9F6;--s2:#E7E3DA;--line:#CFC9BC;--ink:#1D1614;--mut:#655A54;--acc:#6E1423;--ok:#2E6B4A;--warn:#7A5100}
+  *{box-sizing:border-box;margin:0}
+  body{font-family:"Familjen Grotesk",sans-serif;color:var(--ink)}
+  .slide{width:1280px;height:720px;background:var(--canvas);padding:64px;page-break-after:always;position:relative;display:flex;flex-direction:column}
+  h1,h2{font-family:"Young Serif",serif;letter-spacing:-.02em;line-height:1.1}
+  h1{font-size:64px} h2{font-size:40px;margin-bottom:28px}
+  .mono{font-family:"JetBrains Mono",monospace;font-variant-numeric:tabular-nums}
+  .label{font-family:"JetBrains Mono",monospace;font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--mut)}
+  .foot{position:absolute;bottom:28px;left:64px;right:64px;display:flex;justify-content:space-between;font-size:13px;color:var(--mut);border-top:1px solid var(--line);padding-top:10px}
+  .card{background:var(--s1);border:1px solid var(--line);border-radius:6px;padding:22px}
+  .grid2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .grid3{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
+  .big{font-size:56px;font-weight:600}
+  .acc{color:var(--acc)} .ok{color:var(--ok)} .warn{color:var(--warn)}
+  img.shot{width:100%;border:1px solid var(--line);border-radius:6px}
+  ul{padding-left:22px;line-height:1.6}
+  td,th{padding:9px 14px;text-align:left;border-bottom:1px solid var(--line);font-size:17px} table{border-collapse:collapse;width:100%}
+  blockquote{font-size:26px;line-height:1.4;border-left:4px solid var(--acc);padding-left:24px}
+</style></head><body>
+
+<section class="slide" style="justify-content:center">
+  <div class="label">AssemblyAI Voice Agent Hackathon · September 2026</div>
+  <h1 style="font-size:84px;margin:24px 0">Afterward</h1>
+  <p style="font-size:32px;max-width:900px">The calls after a death, made for you.</p>
+  <p style="font-size:20px;color:var(--mut);margin-top:18px;max-width:860px">One conversation with the family. Then a voice agent phones every bank, insurer, utility and pension — waits on hold, says it's an AI, and brings back a verified case reference and a recording for every account.</p>
+  <div class="foot"><span>afterward-lablab.vercel.app</span><span class="mono">01 / 10</span></div>
+</section>
+
+<section class="slide">
+  <h2>The government automated its half. The family got the phone calls.</h2>
+  <blockquote>"You'll also need to tell organisations outside government, like employers and private pension providers, banks, and utility companies."<br><span class="label" style="margin-top:10px;display:block">GOV.UK — What to do after someone dies (verified Sep 2026)</span></blockquote>
+  <div class="grid3" style="margin-top:40px">
+    <div class="card"><div class="big">Tell Us Once</div><p style="color:var(--mut)">covers government departments. Nothing else.</p></div>
+    <div class="card"><div class="big">DNS</div><p style="color:var(--mut)">the Death Notification Service covers member banks. Nothing else.</p></div>
+    <div class="card"><div class="big acc">Everyone else</div><p style="color:var(--mut)">answers the phone — a dozen calls, queues, the death retold each time, in the worst week of a family's life.</p></div>
+  </div>
+  <div class="foot"><span>Problem</span><span class="mono">02 / 10</span></div>
+</section>
+
+<section class="slide">
+  <h2>One conversation. Twelve calls. Evidence for each.</h2>
+  <img class="shot" src="shot-board.png" style="max-height:440px;object-fit:cover;object-position:top">
+  <div class="foot"><span>Solution — the live board (replaying real captured sessions)</span><span class="mono">03 / 10</span></div>
+</section>
+
+<section class="slide">
+  <h2>Doctrine, not features</h2>
+  <div class="grid3" style="flex:1">
+    <div class="card"><h3 style="font-size:24px;margin-bottom:12px">It never guesses</h3><p>A server-side validator checks every reference against what the clerk actually said. Wrong captures are refused mid-call and re-asked. Anything the family didn't provide becomes an amber "Needs you" card. There is no code path that invents a value.</p></div>
+    <div class="card"><h3 style="font-size:24px;margin-bottom:12px">It says it's an AI</h3><p>Every call opens with a disclosure that an AI assistant is calling with the family's permission — required by EU AI Act Art. 50 (in force 2 Aug 2026), and by decency first.</p></div>
+    <div class="card"><h3 style="font-size:24px;margin-bottom:12px">Evidence for everything</h3><p>Every call ends with a stereo recording (institution left, agent right), a timeline, and a verified reference in a shareable Estate Ledger.</p></div>
+  </div>
+  <div class="foot"><span>Value proposition</span><span class="mono">04 / 10</span></div>
+</section>
+
+<section class="slide">
+  <h2>Measured, not claimed</h2>
+  <div class="grid3" id="totals">
+    <div class="card"><div class="big mono" id="t-calls">12</div><div class="label">calls made, full-length holds</div></div>
+    <div class="card"><div class="big mono" id="t-refs">12</div><div class="label">references verified vs ground truth</div></div>
+    <div class="card"><div class="big mono" id="t-hold">—</div><div class="label">of hold endured</div></div>
+    <div class="card"><div class="big mono ok">0</div><div class="label">unverified writes, ever</div></div>
+    <div class="card"><div class="big mono warn" id="t-amber">—</div><div class="label">escalated to the family, not guessed</div></div>
+    <div class="card"><div class="big mono" id="t-rej">—</div><div class="label">validator refusals, all recovered</div></div>
+  </div>
+  <p class="label" style="margin-top:22px">Seeded estate · 12 scripted institution lines (labelled simulated test bed) · reproduce with npm run verify</p>
+  <div class="foot"><span>Proof</span><span class="mono">05 / 10</span></div>
+</section>
+
+<section class="slide">
+  <h2>Deep in the Voice Agent API</h2>
+  <div class="grid2">
+    <ul style="font-size:19px">
+      <li>One live Voice Agent session per call — STT, turn detection, TTS, tools in one WebSocket</li>
+      <li>Client-side tools: <span class="mono">press_key</span> (DTMF), <span class="mono">flag_needs_family</span>, <span class="mono">record_outcome</span> — with a validator that can refuse</li>
+      <li><span class="mono">transcription_mode → max_accuracy</span> switched mid-call, right before the reference is spoken</li>
+      <li>Per-call keyterms for the deceased's name — never the expected reference (no ground-truth biasing)</li>
+      <li>Sponsor-side stereo recordings (left = institution, right = agent) are the Ledger's evidence</li>
+      <li>Turn-taking survives scripted IVR menus, hold music and a 6-bit degraded-audio failure hunt</li>
+    </ul>
+    <img class="shot" src="shot-ledger.png" style="max-height:440px;object-fit:cover;object-position:top">
+  </div>
+  <div class="foot"><span>Application of technology — protocol notes in the repo</span><span class="mono">06 / 10</span></div>
+</section>
+
+<section class="slide">
+  <h2>Market</h2>
+  <div class="grid3">
+    <div class="card"><div class="big mono">650k</div><div class="label">UK deaths / year</div></div>
+    <div class="card"><div class="big mono">2.8M</div><div class="label">US deaths / year</div></div>
+    <div class="card"><div class="big mono">30–60</div><div class="label">organisations to notify per estate</div></div>
+  </div>
+  <p style="margin-top:30px;font-size:20px;max-width:980px">Every death creates days of notification work. Funeral directors already sell aftercare and compete on service; estate solicitors bill for this by the hour. The category is proven — Empathy has raised ~$90M, Settld partners with UK banks — and both stop at forms and email. The phone call is the unautomated last mile.</p>
+  <div class="foot"><span>Market analysis</span><span class="mono">07 / 10</span></div>
+</section>
+
+<section class="slide">
+  <h2>Nobody makes the calls</h2>
+  <table>
+    <tr><th></th><th>Coverage</th><th>Mechanism</th><th>Evidence trail</th></tr>
+    <tr><td>Tell Us Once (gov)</td><td>Government only</td><td>One form</td><td>—</td></tr>
+    <tr><td>Death Notification Service</td><td>Member banks only</td><td>Web form → banks call the family back</td><td>—</td></tr>
+    <tr><td>Empathy / Settld</td><td>Broad</td><td>Forms, email, human ops</td><td>Status updates</td></tr>
+    <tr><td class="acc"><strong>Afterward</strong></td><td>Everyone with a phone line</td><td><strong>Makes the call</strong> — holds, menus, clerks</td><td><strong>Verified reference + recording per account</strong></td></tr>
+  </table>
+  <p style="margin-top:24px;color:var(--mut)">Afterward files Tell Us Once and DNS where they exist — and phones everyone they don't cover.</p>
+  <div class="foot"><span>Competitive analysis</span><span class="mono">08 / 10</span></div>
+</section>
+
+<section class="slide">
+  <h2>Business model & roadmap</h2>
+  <div class="grid2">
+    <div>
+      <div class="label" style="margin-bottom:12px">Revenue</div>
+      <ul style="font-size:19px">
+        <li><strong>B2B (primary):</strong> funeral directors' aftercare packages — per-case licence, existing budget line, built-in distribution at the moment of need</li>
+        <li><strong>B2B:</strong> estate & probate firms — per-matter, the Ledger drops straight into the file</li>
+        <li><strong>B2C:</strong> per-estate, one price, unlimited institutions</li>
+      </ul>
+    </div>
+    <div>
+      <div class="label" style="margin-bottom:12px">Next 90 days</div>
+      <ul style="font-size:19px">
+        <li>Real outbound leg (Twilio SIP ↔ Voice Agent API) — starting with requirements-discovery calls to real bereavement lines: "what do you need from a family?" — legitimate, harms no one, maps the terrain</li>
+        <li>Institution requirements directory built from those calls</li>
+        <li>Tell Us Once + DNS filing; document upload & tracking</li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot"><span>Revenue & future plans</span><span class="mono">09 / 10</span></div>
+</section>
+
+<section class="slide" style="justify-content:center">
+  <h2 style="font-size:34px;max-width:1000px">Honest limits: green means what a first human call achieves — case opened, documents requested. Never "done". The demo institutions are simulated and say so on screen; calling a real bank with a fictional death would be fraud, so we refuse to demo it.</h2>
+  <div style="margin-top:48px;display:flex;gap:48px;align-items:center">
+    <div><div class="label">Live</div><div class="mono" style="font-size:26px">afterward-lablab.vercel.app</div></div>
+    <div><div class="label">Code (MIT)</div><div class="mono" style="font-size:26px">github.com/saharshxyz/afterward</div></div>
+  </div>
+  <div class="foot"><span>Afterward — the calls after. Made for you.</span><span class="mono">10 / 10</span></div>
+</section>
+</body></html>

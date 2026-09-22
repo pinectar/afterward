@@ -5,7 +5,11 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "verify": "node scripts/verify.mjs",
+    "spike": "node scripts/spike.mjs",
+    "clips": "node scripts/gen-clips.mjs",
+    "capture": "node scripts/run-all.mjs"
   },
   "dependencies": {
     "next": "16.3.6",
@@ -18,6 +22,7 @@
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
+    "playwright": "^1.63.0",
     "tailwindcss": "^4",
     "typescript": "^5"
   }
