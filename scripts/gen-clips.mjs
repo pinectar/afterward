@@ -69,6 +69,8 @@ for (const f of fs.readdirSync(SCEN_DIR).filter((f) => f.endsWith(".json"))) {
     hold_announce: [s.holdAnnouncement, s.ivrVoice, IVR_FILTER],
     clerk_greeting: [s.clerk.greeting, s.clerkVoice, TEL_FILTER],
     outcome_closing: [closing, s.clerkVoice, TEL_FILTER],
+    // degraded variant: genuinely bad line quality so STT genuinely mishears the ref
+    ...(s.degradedClosing ? { outcome_closing_degraded: [closing, s.clerkVoice, "atempo=1.35,acrusher=bits=6:mode=log:mix=0.6,highpass=f=500,lowpass=f=2400,volume=0.8,aformat=sample_rates=24000:channel_layouts=mono"] } : {}),
   };
   for (const t of s.clerk.turns) {
     if (t.say) lines[`turn_${t.id}_say`] = [t.say, s.clerkVoice, TEL_FILTER];

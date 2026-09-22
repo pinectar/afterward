@@ -5,15 +5,39 @@
   "clerkVoice": "en-GB-MaisieNeural",
   "ivrVoice": "en-GB-RyanNeural",
   "holdSeconds": 50,
-  "ring": { "prompt": "Caledonia Life. Calls are recorded. If you are calling about a bereavement, please stay on the line." },
-  "menu": { "prompt": "For new policies, press one. For claims, press two. For bereavement notifications, press three.", "correctKey": "3", "wrongKeyPrompt": "That option wasn't recognised." },
+  "ring": {
+    "prompt": "Caledonia Life. Calls are recorded. If you are calling about a bereavement, please stay on the line."
+  },
+  "menu": {
+    "prompt": "For new policies, press one. For claims, press two. For bereavement notifications, press three.",
+    "correctKey": "3",
+    "wrongKeyPrompt": "That option wasn't recognised."
+  },
   "holdAnnouncement": "Please continue to hold. A member of our specialist team will answer as soon as possible.",
   "clerk": {
     "greeting": "Specialist team, Alan speaking. My condolences. May I take the policyholder's full name and date of death?",
     "turns": [
-      { "id": "NAME", "say": "", "expect": ["deceased_full_name", "date_of_death"], "next": "OUTCOME", "reprompt": "Could you repeat the date of death for me? I need it exactly as on the certificate." }
+      {
+        "id": "NAME",
+        "say": "",
+        "expect": [
+          "deceased_full_name",
+          "date_of_death"
+        ],
+        "next": "OUTCOME",
+        "reprompt": "Could you repeat the date of death for me? I need it exactly as on the certificate."
+      }
     ]
   },
-  "outcome": { "type": "case_opened", "refPrefix": "CAL", "documents": ["original death certificate", "claimant identification"], "closing": "That's noted, and the policy is flagged. Your reference is {REF}. The claims pack goes out today. Is the address on file still correct for the executor?" },
-  "quirk": "Date precision matters here — the captured-mishear replay (13th vs 30th) lives on this line: the validator rejects the misheard date and the agent re-asks."
+  "outcome": {
+    "type": "case_opened",
+    "refPrefix": "CAL",
+    "documents": [
+      "original death certificate",
+      "claimant identification"
+    ],
+    "closing": "That's noted, and the policy is flagged. Your reference is {REF}. The claims pack goes out to the executor today. Thank you for letting us know."
+  },
+  "quirk": "Date precision matters here \u2014 the captured-mishear replay (13th vs 30th) lives on this line: the validator rejects the misheard date and the agent re-asks.",
+  "degradedClosing": true
 }

@@ -19,6 +19,10 @@ const out = await runCall({
 console.log("\n=== RESULT ===");
 console.log("session:", out.sessionId, "| institution:", out.institution, "| expected ref:", out.ref);
 if (out.error) { console.log("ERROR:", out.error); process.exit(1); }
-const ok = out.result?.outcome?.reference === out.ref && !out.result.amber;
+import("node:fs").then(()=>{});
+const scen = JSON.parse(fs.readFileSync(path.join(ROOT, "lib/sim/scenarios", scenarioId + ".json")));
+const expectAmber = scen.clerk.turns.some((t) => t.askUnavailable);
+const ok = out.result?.outcome?.reference === out.ref && !!out.result.amber === expectAmber;
+console.log("expected amber:", expectAmber);
 console.log("outcome:", JSON.stringify(out.result.outcome), "| amber:", !!out.result.amber);
 console.log(ok ? "SPIKE PASS" : "SPIKE FAIL"); process.exit(ok ? 0 : 1);
