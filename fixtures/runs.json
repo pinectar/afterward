@@ -5,7 +5,7 @@
     "ambers": 2,
     "rejectionsRecovered": 1,
     "unverifiedWrites": 0,
-    "totalCallSeconds": 1673,
+    "totalCallSeconds": 1679,
     "totalHoldSeconds": 587,
     "holdScale": 1,
     "measuredAt": "2026-09-22T20:08:53.407Z"
@@ -972,17 +972,16 @@
     {
       "id": "foxglove-tv",
       "institution": "Foxglove TV",
-      "sessionId": "sess_0114181d56cb4a0a9bacc5b5f0557044",
-      "seconds": 81,
+      "sessionId": "sess_e340a5f3b50d4e72be1660143fdcd2e5",
+      "seconds": 83,
       "holdSeconds": 20,
       "amber": null,
       "outcome": {
         "reference": "FXG-5033",
         "documents": [
-          "membership cancellation",
-          "refund of monthly charge"
+          "refund to card"
         ],
-        "notes": "Called on behalf of Daniel Holt to register bereavement for Margaret Rose Holt."
+        "notes": ""
       },
       "expectedRef": "FXG-5033",
       "rejections": 0,
@@ -990,52 +989,52 @@
       "artifacts": true,
       "events": [
         {
-          "t": 860,
+          "t": 1053,
           "type": "session.ready",
-          "session_id": "sess_0114181d56cb4a0a9bacc5b5f0557044"
+          "session_id": "sess_e340a5f3b50d4e72be1660143fdcd2e5"
         },
         {
-          "t": 860,
+          "t": 1054,
           "type": "call.started",
           "state": "RING",
           "institution": "Foxglove TV"
         },
         {
-          "t": 2962,
+          "t": 3159,
           "type": "line.audio",
           "state": "RING",
           "clip": "ring",
           "text": "Foxglove TV member services. Calls are recorded for quality. Please hold for the options."
         },
         {
-          "t": 6470,
+          "t": 6689,
           "type": "line.heard_as",
           "text": "Foxglove TV Member Services."
         },
         {
-          "t": 9018,
+          "t": 9145,
           "type": "line.heard_as",
           "text": "Calls are recorded for quality."
         },
         {
-          "t": 10358,
+          "t": 10559,
           "type": "line.audio",
           "state": "MENU",
           "clip": "menu",
           "text": "For billing and payments, press one. For help with the app, press two. To cancel a membership, including after a bereavement, press three."
         },
         {
-          "t": 11247,
+          "t": 11491,
           "type": "line.heard_as",
           "text": "Please hold for the options."
         },
         {
-          "t": 21176,
+          "t": 23297,
           "type": "line.heard_as",
           "text": "For billing and payments, press 1. For help with the app, press 2. To cancel a membership, including after a bereavement, press 3."
         },
         {
-          "t": 22511,
+          "t": 22629,
           "type": "tool.call",
           "name": "press_key",
           "args": {
@@ -1043,152 +1042,136 @@
           }
         },
         {
-          "t": 22511,
+          "t": 22629,
           "type": "dtmf",
           "state": "MENU",
           "key": "3"
         },
         {
-          "t": 22511,
+          "t": 22629,
           "type": "tool.result",
           "name": "press_key",
           "ok": true
         },
         {
-          "t": 22511,
+          "t": 22629,
           "type": "hold.started",
           "state": "HOLD",
           "plannedSeconds": 20
         },
         {
-          "t": 24678,
+          "t": 24812,
           "type": "agent.said",
           "state": "HOLD",
           "text": "Hello — I'm an AI assistant calling on behalf of the family of Margaret Holt, with their permission, to register a bereavement. The family keeps a recording of this call."
         },
         {
-          "t": 24678,
+          "t": 24812,
           "type": "agent.final",
           "text": "Hello — I'm an AI assistant calling on behalf of the family of Margaret Holt, with their permission, to register a bereavement. The family keeps a recording of this call.",
           "interrupted": false
         },
         {
-          "t": 28017,
-          "type": "agent.said",
-          "state": "HOLD",
-          "text": "[No output - waiting for human to speak]"
-        },
-        {
-          "t": 28017,
-          "type": "agent.final",
-          "text": "[No output - waiting for human to speak]",
-          "interrupted": false
-        },
-        {
-          "t": 42511,
+          "t": 42630,
           "type": "hold.ended",
           "state": "HOLD"
         },
         {
-          "t": 42511,
+          "t": 42630,
           "type": "line.audio",
           "state": "CLERK",
           "clip": "clerk_greeting",
           "text": "Hi, this is Cormac at Foxglove. I'm sorry you're calling in these circumstances. Can I take the member's full name and the date they passed away?"
         },
         {
-          "t": 51434,
+          "t": 51643,
           "type": "line.heard_as",
           "text": "Hi, this is Cormac at Foxglove. I'm sorry you're calling in these circumstances."
         },
         {
-          "t": 53526,
+          "t": 53460,
           "type": "line.heard_as",
           "text": "Can I take the member's full name and the date they passed away?"
         },
         {
-          "t": 61713,
+          "t": 63835,
           "type": "agent.said",
           "state": "CLERK",
-          "text": "Thank you, Cormac. The member was Margaret Rose Holt, H-O-L-T, and she passed away on the thirteenth of September, twenty twenty-six."
+          "text": "Hello, I am an AI assistant calling for the family. The deceased is Margaret Rose Holt, and she passed away on the thirteenth of September, twenty twenty-six."
         },
         {
-          "t": 61713,
+          "t": 63835,
           "type": "agent.final",
-          "text": "Thank you, Cormac. The member was Margaret Rose Holt, H-O-L-T, and she passed away on the thirteenth of September, twenty twenty-six.",
+          "text": "Hello, I am an AI assistant calling for the family. The deceased is Margaret Rose Holt, and she passed away on the thirteenth of September, twenty twenty-six.",
           "interrupted": false
         },
         {
-          "t": 61714,
+          "t": 63836,
           "type": "line.audio",
           "state": "OUTCOME",
           "clip": "outcome_closing",
           "text": "That's the membership cancelled straight away, and this month's charge is refunded to the card. Your reference is F X G,   5 0 3 3. Take good care."
         },
         {
-          "t": 71174,
+          "t": 73569,
           "type": "line.heard_as",
           "text": "That's the membership cancelled straight away, and this month's charge is refunded to the card."
         },
         {
-          "t": 77462,
+          "t": 79778,
           "type": "line.heard_as",
           "text": "Your reference is FXG-5033. Take good care."
         },
         {
-          "t": 79188,
+          "t": 81422,
           "type": "tool.call",
           "name": "record_outcome",
           "args": {
             "documents": [
-              "membership cancellation",
-              "refund of monthly charge"
+              "refund to card"
             ],
-            "notes": "Called on behalf of Daniel Holt to register bereavement for Margaret Rose Holt.",
             "reference": "FXG-5033"
           }
         },
         {
-          "t": 79188,
+          "t": 81423,
           "type": "outcome.recorded",
           "state": "OUTCOME",
           "reference": "FXG-5033",
           "documents": [
-            "membership cancellation",
-            "refund of monthly charge"
+            "refund to card"
           ],
-          "notes": "Called on behalf of Daniel Holt to register bereavement for Margaret Rose Holt."
+          "notes": ""
         },
         {
-          "t": 79188,
+          "t": 81423,
           "type": "tool.result",
           "name": "record_outcome",
           "ok": true
         },
         {
-          "t": 80295,
+          "t": 82499,
           "type": "agent.said",
           "state": "OUTCOME",
-          "text": "Thank you, Cormac. Could you please provide a case reference for our records?"
+          "text": "Thank you for your help. Goodbye."
         },
         {
-          "t": 80295,
+          "t": 82499,
           "type": "agent.final",
-          "text": "Thank you, Cormac. Could you please provide a case reference for our records?",
+          "text": "Thank you for your help. Goodbye.",
           "interrupted": false
         },
         {
-          "t": 80295,
+          "t": 82499,
           "type": "call.done",
           "state": "DONE",
           "amber": false,
           "outcome": {
             "reference": "FXG-5033",
             "documents": [
-              "membership cancellation",
-              "refund of monthly charge"
+              "refund to card"
             ],
-            "notes": "Called on behalf of Daniel Holt to register bereavement for Margaret Rose Holt."
+            "notes": ""
           }
         }
       ]
@@ -1196,8 +1179,8 @@
     {
       "id": "kestrel-mobile",
       "institution": "Kestrel Mobile",
-      "sessionId": "sess_7c1b3c7d4fb04a8a9db6e5d95b8728b9",
-      "seconds": 123,
+      "sessionId": "sess_70a432a44d224ba59a88181cdb260870",
+      "seconds": 127,
       "holdSeconds": 30,
       "amber": null,
       "outcome": {
@@ -1211,52 +1194,47 @@
       "artifacts": true,
       "events": [
         {
-          "t": 1146,
+          "t": 843,
           "type": "session.ready",
-          "session_id": "sess_7c1b3c7d4fb04a8a9db6e5d95b8728b9"
+          "session_id": "sess_70a432a44d224ba59a88181cdb260870"
         },
         {
-          "t": 1147,
+          "t": 843,
           "type": "call.started",
           "state": "RING",
           "institution": "Kestrel Mobile"
         },
         {
-          "t": 3251,
+          "t": 2945,
           "type": "line.audio",
           "state": "RING",
           "clip": "ring",
           "text": "You've reached Kestrel Mobile. Calls are recorded for training. Hold the line, please, while we take you through the options."
         },
         {
-          "t": 8923,
+          "t": 8713,
           "type": "line.heard_as",
           "text": "You've reached Kestrel Mobile. Calls are recorded for training."
         },
         {
-          "t": 11380,
+          "t": 11057,
           "type": "line.heard_as",
           "text": "Hold the line, please."
         },
         {
-          "t": 13000,
+          "t": 12698,
           "type": "line.audio",
           "state": "MENU",
           "clip": "menu",
           "text": "For upgrades, press one. For billing, press two. To close or transfer an account after a bereavement, press three. For technical support, press four."
         },
         {
-          "t": 13526,
+          "t": 26538,
           "type": "line.heard_as",
-          "text": "I'll take you through the options."
+          "text": "we take you through the options. For upgrades, press 1. For billing, press 2. To close or transfer an account after a bereavement, press 3. For technical support, press 4."
         },
         {
-          "t": 26824,
-          "type": "line.heard_as",
-          "text": "For upgrades, press 1. For billing, press 2. To close or transfer an account after a bereavement, press 3. For technical support, press 4."
-        },
-        {
-          "t": 28718,
+          "t": 28791,
           "type": "tool.call",
           "name": "press_key",
           "args": {
@@ -1264,135 +1242,123 @@
           }
         },
         {
-          "t": 28718,
+          "t": 28791,
           "type": "dtmf",
           "state": "MENU",
           "key": "3"
         },
         {
-          "t": 28718,
+          "t": 28791,
           "type": "tool.result",
           "name": "press_key",
           "ok": true
         },
         {
-          "t": 28719,
+          "t": 28791,
           "type": "hold.started",
           "state": "HOLD",
           "plannedSeconds": 30
         },
         {
-          "t": 30875,
-          "type": "agent.said",
-          "state": "HOLD",
-          "text": "press_key{key:"
-        },
-        {
-          "t": 30875,
-          "type": "agent.final",
-          "text": "press_key{key:",
-          "interrupted": false
-        },
-        {
-          "t": 33935,
+          "t": 30972,
           "type": "agent.said",
           "state": "HOLD",
           "text": "​​"
         },
         {
-          "t": 33935,
+          "t": 30972,
           "type": "agent.final",
           "text": "​​",
           "interrupted": false
         },
         {
-          "t": 56727,
+          "t": 56784,
           "type": "hold.ended",
           "state": "HOLD"
         },
         {
-          "t": 56727,
+          "t": 56784,
           "type": "line.audio",
           "state": "CLERK",
           "clip": "clerk_greeting",
           "text": "Hiya, you're through to Dara at Kestrel. I can see you've come through the bereavement line — I'm very sorry to hear that. Could you give me the account holder's full name, and the date they passed away?"
         },
         {
-          "t": 67366,
+          "t": 68051,
           "type": "line.heard_as",
-          "text": "Hiya, you're through to Dara at Kestrel. I can see you've come through their bereavement line. I'm very sorry to hear that."
+          "text": "Hiya, you're through to Dara at Kestrel. I can see you've come through the bereavement line. I'm very sorry to hear that."
         },
         {
-          "t": 71829,
+          "t": 72420,
           "type": "line.heard_as",
           "text": "Could you give me the account holder's full name and the date they passed away?"
         },
         {
-          "t": 86050,
+          "t": 86291,
           "type": "agent.said",
           "state": "CLERK",
-          "text": "Hello — I'm an AI assistant calling on behalf of the family of Margaret Holt, with their permission, to register a bereavement. The family keeps a recording of this call. The deceased was Margaret Rose Holt, and she passed away on the thirteenth of September, twenty twenty-six."
+          "text": "Hello — I'm an AI assistant calling on behalf of the family of Margaret Holt, with their permission, to register a bereavement. The family keeps a recording of this call. Her full name was Margaret Rose Holt and she passed away on the thirteenth of September, twenty twenty-six."
         },
         {
-          "t": 86050,
+          "t": 86291,
           "type": "agent.final",
-          "text": "Hello — I'm an AI assistant calling on behalf of the family of Margaret Holt, with their permission, to register a bereavement. The family keeps a recording of this call. The deceased was Margaret Rose Holt, and she passed away on the thirteenth of September, twenty twenty-six.",
+          "text": "Hello — I'm an AI assistant calling on behalf of the family of Margaret Holt, with their permission, to register a bereavement. The family keeps a recording of this call. Her full name was Margaret Rose Holt and she passed away on the thirteenth of September, twenty twenty-six.",
           "interrupted": false
         },
         {
-          "t": 86051,
+          "t": 86291,
           "type": "line.audio",
           "state": "TURN_REL",
           "clip": "turn_REL_say",
           "text": "Thanks for that. And can I take your own name and your relationship to them?"
         },
         {
-          "t": 91402,
+          "t": 92600,
           "type": "line.heard_as",
           "text": "Thanks for that."
         },
         {
-          "t": 94913,
+          "t": 96224,
           "type": "line.heard_as",
           "text": "And can I take your own name and your relationship to them?"
         },
         {
-          "t": 100608,
+          "t": 102483,
           "type": "agent.said",
           "state": "TURN_REL",
-          "text": "I am calling on behalf of Daniel Holt, her son and executor."
+          "text": "I am calling on behalf of Daniel Holt, who is her son and the executor."
         },
         {
-          "t": 100608,
+          "t": 102483,
           "type": "agent.final",
-          "text": "I am calling on behalf of Daniel Holt, her son and executor.",
+          "text": "I am calling on behalf of Daniel Holt, who is her son and the executor.",
           "interrupted": false
         },
         {
-          "t": 100609,
+          "t": 102483,
           "type": "line.audio",
           "state": "OUTCOME",
           "clip": "outcome_closing",
           "text": "I've closed the account from today and cleared the final bill, so there's nothing to pay. Your reference is K S M,   7 5 8 0. Mind yourself now."
         },
         {
-          "t": 110878,
+          "t": 113824,
           "type": "line.heard_as",
           "text": "I've closed the account from today and cleared the final bill, so there's nothing to pay."
         },
         {
-          "t": 112261,
+          "t": 115056,
           "type": "agent.final",
-          "text": "Thank you very",
+          "text": "That is very",
           "interrupted": true
         },
         {
-          "t": 115324,
+          "t": 118226,
           "type": "line.heard_as",
           "text": "Your reference is KSM-7580. Mind yourself now."
         },
         {
-          "t": 117984,
+          "t": 121018,
           "type": "tool.call",
           "name": "record_outcome",
           "args": {
@@ -1402,7 +1368,7 @@
           }
         },
         {
-          "t": 117985,
+          "t": 121019,
           "type": "outcome.recorded",
           "state": "OUTCOME",
           "reference": "KSM-7580",
@@ -1410,25 +1376,25 @@
           "notes": "Account closed and final bill cleared."
         },
         {
-          "t": 117985,
+          "t": 121019,
           "type": "tool.result",
           "name": "record_outcome",
           "ok": true
         },
         {
-          "t": 122416,
+          "t": 126124,
           "type": "agent.said",
           "state": "OUTCOME",
-          "text": "Thank you very much. Goodbye."
+          "text": "Thank you so much for your help, Dara. Goodbye."
         },
         {
-          "t": 122416,
+          "t": 126124,
           "type": "agent.final",
-          "text": "Thank you very much. Goodbye.",
+          "text": "Thank you so much for your help, Dara. Goodbye.",
           "interrupted": false
         },
         {
-          "t": 122416,
+          "t": 126124,
           "type": "call.done",
           "state": "DONE",
           "amber": false,

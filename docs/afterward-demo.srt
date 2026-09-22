@@ -1,0 +1,367 @@
+1
+00:00:00,694 --> 00:00:01,890
+When someone dies
+
+2
+00:00:01,770 --> 00:00:03,897
+the family inherits a phone queue.
+
+3
+00:00:04,497 --> 00:00:06,952
+This is the machine that stands in it for them.
+
+4
+00:00:08,673 --> 00:00:11,614
+The UK government automated its own half —
+
+5
+00:00:11,495 --> 00:00:13,793
+one form tells every department.
+
+6
+00:00:13,823 --> 00:00:15,249
+Then its website says:
+
+7
+00:00:15,129 --> 00:00:17,212
+you'll also need to tell the banks
+
+8
+00:00:17,092 --> 00:00:18,810
+the insurers, the pensions
+
+9
+00:00:18,689 --> 00:00:19,682
+the utilities.
+
+10
+00:00:20,356 --> 00:00:21,951
+Dozens of organisations.
+
+11
+00:00:22,091 --> 00:00:23,411
+Days on hold.
+
+12
+00:00:23,416 --> 00:00:25,645
+The death, retold to every single one.
+
+13
+00:00:27,219 --> 00:00:29,889
+So the family talks to Afterward once.
+
+14
+00:00:29,944 --> 00:00:31,207
+Margaret Rose Holt
+
+15
+00:00:31,087 --> 00:00:33,349
+died on the thirteenth of September.
+
+16
+00:00:33,379 --> 00:00:35,208
+Her son Daniel is the executor.
+
+17
+00:00:35,798 --> 00:00:37,381
+And one thing matters here:
+
+18
+00:00:37,261 --> 00:00:39,243
+the family has no account numbers.
+
+19
+00:00:39,243 --> 00:00:40,150
+Remember that.
+
+20
+00:00:41,173 --> 00:00:42,568
+Then it dials.
+
+21
+00:00:42,598 --> 00:00:44,086
+Twelve institutions
+
+22
+00:00:43,967 --> 00:00:46,672
+in parallel — each card is a real recorded
+
+23
+00:00:46,552 --> 00:00:49,258
+session with the AssemblyAI Voice Agent.
+
+24
+00:00:49,288 --> 00:00:51,608
+It presses the menu keys itself.
+
+25
+00:00:51,638 --> 00:00:53,386
+It waits through the hold music
+
+26
+00:00:53,266 --> 00:00:55,390
+and says nothing until a human answers.
+
+27
+00:00:55,975 --> 00:00:57,160
+Watch the timers:
+
+28
+00:00:57,040 --> 00:00:58,224
+that hold is real
+
+29
+00:00:58,104 --> 00:01:00,125
+replayed at eight times speed.
+
+30
+00:01:03,219 --> 00:01:05,789
+Here is the moment that matters most.
+
+31
+00:01:05,869 --> 00:01:07,166
+At Harberton and Vale
+
+32
+00:01:07,046 --> 00:01:09,519
+the agent tries to record an outcome before
+
+33
+00:01:09,399 --> 00:01:11,284
+the clerk has issued a reference.
+
+34
+00:01:11,707 --> 00:01:14,377
+The validator refuses its own agent.
+
+35
+00:01:14,382 --> 00:01:16,157
+Refused, in red.
+
+36
+00:01:16,212 --> 00:01:18,748
+It asks again, the clerk issues the reference
+
+37
+00:01:18,628 --> 00:01:20,772
+and only a verified number is written.
+
+38
+00:01:21,347 --> 00:01:23,763
+There is no code path that writes a guess.
+
+39
+00:01:25,693 --> 00:01:28,584
+And when Wessex Building Society asks for something
+
+40
+00:01:28,464 --> 00:01:30,157
+that isn't in the family's brief?
+
+41
+00:01:30,589 --> 00:01:32,060
+The card turns amber.
+
+42
+00:01:32,115 --> 00:01:34,835
+Needs you — with the exact question to answer.
+
+43
+00:01:34,914 --> 00:01:37,140
+Meanwhile the seals keep landing:
+
+44
+00:01:37,020 --> 00:01:38,870
+Caledonia Life, case opened.
+
+45
+00:01:38,925 --> 00:01:40,592
+Foxglove, case opened.
+
+46
+00:01:41,067 --> 00:01:42,973
+Verified reference numbers
+
+47
+00:01:42,853 --> 00:01:44,089
+stamped one by one.
+
+48
+00:01:45,675 --> 00:01:48,371
+Everything lands in the Estate Ledger.
+
+49
+00:01:48,425 --> 00:01:49,503
+Per institution:
+
+50
+00:01:49,383 --> 00:01:50,870
+the verified reference
+
+51
+00:01:50,750 --> 00:01:52,511
+the documents they asked for
+
+52
+00:01:52,390 --> 00:01:54,288
+and the full stereo recording —
+
+53
+00:01:54,167 --> 00:01:56,339
+the institution on the left channel
+
+54
+00:01:56,219 --> 00:01:57,637
+Afterward on the right.
+
+55
+00:01:58,201 --> 00:02:00,676
+Evidence a solicitor can actually use
+
+56
+00:02:00,556 --> 00:02:02,003
+shareable as one page.
+
+57
+00:02:04,223 --> 00:02:06,018
+One thing we will not fake:
+
+58
+00:02:05,898 --> 00:02:08,651
+the twelve institutions are a labelled
+
+59
+00:02:08,531 --> 00:02:09,848
+scripted test bed.
+
+60
+00:02:09,902 --> 00:02:12,316
+Calling a real bank with a fictional death
+
+61
+00:02:12,196 --> 00:02:14,348
+would be fraud — so we refuse to demo it.
+
+62
+00:02:14,827 --> 00:02:17,490
+Everything the agent did on those calls was
+
+63
+00:02:17,370 --> 00:02:17,772
+real.
+
+64
+00:02:19,744 --> 00:02:22,579
+Six hundred and fifty thousand UK deaths a
+
+65
+00:02:22,459 --> 00:02:22,889
+year.
+
+66
+00:02:22,944 --> 00:02:25,089
+Around three million in the US.
+
+67
+00:02:25,144 --> 00:02:27,080
+Every one of them creates this work.
+
+68
+00:02:28,673 --> 00:02:30,668
+Tell Us Once covers government.
+
+69
+00:02:30,673 --> 00:02:33,341
+The Death Notification Service covers member
+
+70
+00:02:33,221 --> 00:02:33,668
+banks.
+
+71
+00:02:33,722 --> 00:02:36,272
+Empathy and Settld do forms and email.
+
+72
+00:02:36,872 --> 00:02:38,442
+Nobody makes the calls.
+
+73
+00:02:38,582 --> 00:02:39,636
+That is the gap.
+
+74
+00:02:41,650 --> 00:02:43,625
+The economics are measured
+
+75
+00:02:43,505 --> 00:02:44,431
+not guessed.
+
+76
+00:02:44,486 --> 00:02:47,317
+Twelve calls took twenty-eight minutes of agent
+
+77
+00:02:47,197 --> 00:02:49,756
+time — two or three pounds of cost per estate.
+
+78
+00:02:49,835 --> 00:02:51,653
+Sold through funeral directors
+
+79
+00:02:51,533 --> 00:02:53,286
+who already package aftercare
+
+80
+00:02:53,166 --> 00:02:55,422
+at seventy-nine to one-forty-nine per case.
+
+81
+00:02:57,248 --> 00:02:57,812
+Next:
+
+82
+00:02:57,692 --> 00:02:59,478
+the real phone leg.
+
+83
+00:02:59,533 --> 00:03:01,803
+It starts with a call that harms no one —
+
+84
+00:03:01,683 --> 00:03:04,692
+phoning real bereavement lines to ask one question:
+
+85
+00:03:04,572 --> 00:03:06,304
+what do you need from a family?
+
+86
+00:03:06,804 --> 00:03:09,545
+That map of requirements becomes the product's
+
+87
+00:03:09,424 --> 00:03:09,813
+moat.
+
+88
+00:03:11,698 --> 00:03:12,443
+Afterward.
+
+89
+00:03:12,578 --> 00:03:14,373
+Built on AssemblyAI.
+
+90
+00:03:14,403 --> 00:03:17,102
+Twelve calls, twelve verified references
+
+91
+00:03:16,982 --> 00:03:17,912
+zero guesses.
+
+92
+00:03:18,483 --> 00:03:20,369
+The calls after — made for you.

@@ -22,7 +22,7 @@ phone — so a grieving family spends days on hold, retelling the death to a doz
 | **Application of Technology** | One live AssemblyAI **Voice Agent API** session per call (WS protocol notes: [docs/voice-agent-api-cheatsheet.md](docs/voice-agent-api-cheatsheet.md)); client-side tools (`press_key` DTMF, `flag_needs_family`, validated `record_outcome`); per-call keyterms; `transcription_mode` switched to `max_accuracy` right before the reference is spoken; sponsor-side **stereo session recordings** (left = institution, right = agent) as the evidence artifacts; turn detection against scripted IVR menus |
 | **Originality** | Nobody automates the *calls* — Empathy/Settld are forms and email; check their sites. The refuse-to-guess Estate Ledger is a checkable artifact: verified refs, stereo recordings, and one real mid-call validator REFUSAL (Harberton & Vale, visible on the board and in `fixtures/runs.json`). In the event’s public gallery we found no other bereavement entry (checked Sep 22) |
 | **Business Value** | 650k UK / 2.8M US deaths a year; go-to-market through funeral directors' aftercare; Tell Us Once and the DNS prove institutions want structured notification — Afterward feeds DNS where it exists and calls everyone else |
-| **Presentation** | Deck: [docs/deck/afterward-deck.pdf](docs/deck/afterward-deck.pdf); video linked on the submission page; the board demo needs no sign-in and replays real captured sessions |
+| **Presentation** | Deck: [docs/deck/afterward-deck.pdf](docs/deck/afterward-deck.pdf) · Video (3:23): [docs/afterward-demo.mp4](docs/afterward-demo.mp4); the board demo needs no sign-in and replays real captured sessions |
 
 ## What's real vs simulated (honesty box)
 
