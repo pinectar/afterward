@@ -21,6 +21,18 @@ Honesty: the twelve institutions are a fictional, labelled test bed modelled on 
 The business: 650k UK deaths a year, ~3M in the US, dozens of organisations per estate. Measured cost ~£2–3 of agent time per estate; target £79–149 per case through funeral directors' aftercare. Empathy and Settld prove the category, and both stop at forms and email. Nobody makes the calls.
 ```
 
+**Additional Information:**
+
+```
+Fastest path for judges: open https://afterward-lablab.vercel.app/board — no sign-in, the board starts replaying twelve real captured Voice Agent sessions on its own (holds compressed x8, labelled on screen). Watch for the REFUSED event on Harberton & Vale — that's the server-side validator refusing its own agent mid-call over a reference mismatch — and the amber "Needs you" card on Wessex, where the agent escalates to the family instead of guessing. Then open /ledger/est_holt for the evidence: verified references, documents requested, and the unedited stereo session recordings (institution on the left channel, Afterward on the right).
+
+Everything is reproducible from the repo: "npm run verify" replays the captured dataset offline and asserts the doctrine held (8 checks, 0 unverified writes), and "npm run capture" re-runs all twelve calls live against the Voice Agent API with your own key. The protocol notes I wrote while building against the API are in docs/voice-agent-api-cheatsheet.md.
+
+Built solo during the event. The README's "What's real and what isn't" section states exactly which parts are simulated and why: calling a real bank about a fictional death would be fraud, so the demo uses a labelled scripted test bed, and the roadmap starts with the legitimate real-world call — phoning real bereavement lines to ask what they'd need from a family.
+
+The 3:23 video and the deck are in the repo under docs/ as well as uploaded here.
+```
+
 **Category:** Agent Builder track - The INTERNET OF AGENTS
 **Tech tags:** AssemblyAI (if listed), Vercel, Anthropic Claude, Claude Code, rest api
 
